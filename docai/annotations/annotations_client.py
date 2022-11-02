@@ -8,7 +8,7 @@ from docai.generated.api.models import get_model, get_training_document, get_tra
 from docai.generated.models import ModelTrainingDocumentStatus, PaginatedTrainingDocumentsDto, TrainingDocumentResultDto
 
 
-class AnnotationsClient(BaseClient):
+class AnnotationClient(BaseClient):
     def _get_training_documents(
         self,
         model_id: str,

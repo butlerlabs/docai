@@ -2,7 +2,7 @@
 
 Welcome to [Butler Doc AI](https://butlerlabs.ai)
 
-## Requirements.
+## Requirements
 
 Python >= 3.7
 
@@ -11,7 +11,7 @@ Python >= 3.7
 ### pip install
 
 ```sh
-pip install docai
+pip install docai-py
 ```
 
 ## Getting Started
@@ -20,7 +20,7 @@ Please follow the [installation procedure](#installation--usage) and then run th
 
 ```python
 
-from docai import PredictionsClient
+from docai import PredictionClient
 
 # Get API Key from https://docs.butlerlabs.ai/reference/uploading-documents-to-the-rest-api#get-your-api-key
 api_key = '<api-key>'
@@ -29,7 +29,7 @@ queue_id = '<queue_id>'
 # Path to a local JPEG, PNG, or PDF file
 local_file_path = 'example.pdf'
 
-extraction_results = PredictionsClient(api_key).extract_document(queue_id, local_file_path)
+extraction_results = PredictionClient(api_key).extract_document(queue_id, local_file_path)
 print(extraction_results)
 ```
 
@@ -59,7 +59,7 @@ python -m build
 python -m twine upload --repository testpypi --skip-existing dist/* --verbose
 
 # test install from test pypi
-pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple docai
+pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple docai-py
 
 # Upload to real pypi if things checkout
 python -m twine upload --skip-existing dist/* --verbose

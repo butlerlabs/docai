@@ -1,9 +1,9 @@
 """
-Butler Doc AI SDK
+Butler Doc AI setup script
 """
 from setuptools import find_packages, setup
 
-NAME = "docai"
+NAME = "docai-py"
 VERSION = "0.0.1"
 
 # To install the library, run the following
@@ -30,12 +30,12 @@ setup(
     author_email="support@butlerlabs.ai",
     url="https://butlerlabs.ai",
     project_urls={"Documentation": "https://docs.butlerlabs.ai/reference/welcome"},
-    keywords=["Butler", "AutoML", "OCR"],  # TODO
+    keywords=["Document AI", "Document Processing", "OCR", "LayoutLM"],
     python_requires=">=3.7",
     install_requires=REQUIRES,
     packages=find_packages(),
     include_package_data=True,
     long_description="""\
-           Welcome to Butler Document AI
+           Welcome to Butler Doc AI
     """,
 )

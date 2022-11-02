@@ -9,7 +9,7 @@ from docai.generated.models import ExtractDocumentMultipartData, ExtractionResul
 from docai.generated.types import File
 
 
-class PredictionsClient(BaseClient):
+class PredictionClient(BaseClient):
     def extract_document(
         self,
         queue_id: str,

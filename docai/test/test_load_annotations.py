@@ -1,7 +1,7 @@
 import logging
 import os
 
-from docai import AnnotationsClient
+from docai import AnnotationClient
 from docai.annotations.layoutlm_utils import normalize_ner_annotation_for_layoutlm
 
 # Run using 'python -m docai.test.test_load_annotations'
@@ -14,7 +14,7 @@ api_key = os.environ["BUTLER_API_KEY"]
 # Find your model's uuid
 model_id = "00000000-0000-0000-0000-000000000000"
 
-annotations = AnnotationsClient(api_key).load_annotations(
+annotations = AnnotationClient(api_key).load_annotations(
     model_id,
     load_all_pages=True,
 )
