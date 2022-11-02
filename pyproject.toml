@@ -1,0 +1,14 @@
+[tool.black]
+line_length = 120
+target_version = ['py38']
+
+[tool.isort]
+balanced_wrapping = true
+profile = "black"
+virtual_env = "./.venv"
+skip_glob = [
+    "/.venv/**",
+    "/butler/generated/**",
+]
+line_length = 120
+include_trailing_comma = true
