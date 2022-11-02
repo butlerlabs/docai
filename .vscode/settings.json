@@ -1,0 +1,17 @@
+{
+  "editor.tabSize": 4,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true,
+  },
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "python.formatting.provider": "black",
+  "python.formatting.blackArgs": [
+    "-l 120"
+  ],
+  "python.languageServer": "Pylance",
+  "search.exclude": {
+    "**/.venv": true
+  },
+}
