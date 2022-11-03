@@ -1,2 +1,2 @@
-""" A client library for accessing Butler REST API Documentation """
+""" A client library for accessing All Butler REST APIs """
 from .client import AuthenticatedClient, Client
