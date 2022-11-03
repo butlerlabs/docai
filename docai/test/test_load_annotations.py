@@ -20,7 +20,7 @@ def test_annotations():
         load_all_pages=True,
     )
 
-    annotations_as_ner = annotations.as_ner(as_iob=True)
+    annotations_as_ner = annotations.as_ner(as_iob2=True)
 
     # Normalize NER annotations by 1000 to match LayoutLM expected bounding box format
     annotations_as_ner = list(map(normalize_ner_annotation_for_layoutlm, annotations_as_ner))
