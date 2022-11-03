@@ -1,2 +1,2 @@
 from docai.generated.models import ExtractionResultsDto
-from docai.predictions.predictions_client import PredictionClient
+from docai.predictions.prediction_client import PredictionClient

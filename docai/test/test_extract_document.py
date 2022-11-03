@@ -1,7 +1,7 @@
 import logging
 import os
 
-from docai import PredictionsClient
+from docai import PredictionClient
 
 # Run using 'python -m docai.test.test_extract_document'
 
@@ -11,11 +11,11 @@ logging.basicConfig(level=logging.INFO)
 api_key = os.environ["BUTLER_API_KEY"]
 
 # Find your queue's uuid
-queue_id = "00000000-0000-0000-0000-000000000000"
+queue_id = os.environ["QUEUE_ID"]
 
 # Get a local test file
-local_file = "path/to/file"
+local_file = "./docai/test/test.pdf"
 
-extraction_results = PredictionsClient(api_key).extract_document(queue_id, local_file)
+extraction_results = PredictionClient(api_key).extract_document(queue_id, local_file)
 
 print(extraction_results)
