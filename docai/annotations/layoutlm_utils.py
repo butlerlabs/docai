@@ -4,7 +4,7 @@ from docai.annotations.ner_utils import DocumentNerAnnotation
 
 
 def normalize_bounding_box(bbx: List[int]) -> List[int]:
-    normalize_bounding_box = list(map(lambda point: point * 1000, bbx))
+    normalize_bounding_box = list(map(lambda point: int(point * 1000), bbx))
     return normalize_bounding_box
 
 
