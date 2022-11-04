@@ -18,8 +18,8 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Install dependencies
         run: |
-          sudo apt install poppler-utils
-          sudo apt install pipenv
+          sudo apt install poppler-utils -y
+          sudo apt install pipenv -y
           PIPENV_VENV_IN_PROJECT=1 pipenv install -d
       - name: Run E2E Tests
         env:
