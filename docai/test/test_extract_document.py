@@ -7,15 +7,17 @@ from docai import PredictionClient
 
 logging.basicConfig(level=logging.INFO)
 
-# Get API Key from https://docs.butlerlabs.ai/reference/uploading-documents-to-the-rest-api#get-your-api-key
-api_key = os.environ["BUTLER_API_KEY"]
 
-# Find your queue's uuid
-queue_id = os.environ["QUEUE_ID"]
+def test_extract_document():
+    # Get API Key from https://docs.butlerlabs.ai/reference/uploading-documents-to-the-rest-api#get-your-api-key
+    api_key = os.environ["BUTLER_API_KEY"]
 
-# Get a local test file
-local_file = "./docai/test/test.pdf"
+    # Find your queue's uuid
+    queue_id = os.environ["QUEUE_ID"]
 
-extraction_results = PredictionClient(api_key).extract_document(queue_id, local_file)
+    # Get a local test file
+    local_file = "./docai/test/test.pdf"
 
-print(extraction_results)
+    extraction_results = PredictionClient(api_key).extract_document(queue_id, local_file)
+
+    assert extraction_results is not None

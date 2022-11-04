@@ -9,19 +9,20 @@ from docai.annotations.layoutlm_utils import normalize_ner_annotation_for_layout
 logging.basicConfig(level=logging.INFO)
 
 # Get API Key from https://docs.butlerlabs.ai/reference/uploading-documents-to-the-rest-api#get-your-api-key
-api_key = os.environ["BUTLER_API_KEY"]
+def test_annotations():
+    api_key = os.environ["BUTLER_API_KEY"]
 
-# Find your model's uuid
-model_id = "00000000-0000-0000-0000-000000000000"
+    # Find your model's uuid
+    model_id = os.environ["MODEL_ID"]
 
-annotations = AnnotationClient(api_key).load_annotations(
-    model_id,
-    load_all_pages=True,
-)
+    annotations = AnnotationClient(api_key).load_annotations(
+        model_id,
+        load_all_pages=True,
+    )
 
-annotations_as_ner = annotations.as_ner(as_iob=True)
+    annotations_as_ner = annotations.as_ner(as_iob=True)
 
-# Normalize NER annotations by 1000 to match LayoutLM expected bounding box format
-annotations_as_ner = list(map(normalize_ner_annotation_for_layoutlm, annotations_as_ner))
+    # Normalize NER annotations by 1000 to match LayoutLM expected bounding box format
+    annotations_as_ner = list(map(normalize_ner_annotation_for_layoutlm, annotations_as_ner))
 
-print(annotations_as_ner[0])
+    assert annotations_as_ner is not None

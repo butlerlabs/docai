@@ -14,6 +14,9 @@ Python >= 3.7
 pip install docai-py
 ```
 
+### Misc packages that might be needed to be installed on your environment
+- Poppler
+
 ## Getting Started
 
 Please follow the [installation procedure](#installation--usage) and then run the following:
