@@ -1,0 +1,4 @@
+# See https://help.github.com/articles/about-codeowners/ for syntax
+
+# Currently owned by Butler Labs DocAI team
+*            @butlerlabs/docai
