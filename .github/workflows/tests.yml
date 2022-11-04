@@ -19,7 +19,15 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt install poppler-utils -y
-          sudo apt install pipenv -y
+          python -m pip install --upgrade pipenv wheel
+      - id: cache-pipenv
+        uses: actions/cache@v3
+        with:
+          path: .venv
+          key: ${{ runner.os }}-pipenv-${{ hashFiles('**/Pipfile.lock') }}
+      - name: Install pipenv dependencies
+        if: steps.cache-pipenv.outputs.cache-hit != 'true'
+        run: |
           PIPENV_VENV_IN_PROJECT=1 pipenv install -d
       - name: Run E2E Tests
         env:
