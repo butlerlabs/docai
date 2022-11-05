@@ -1,6 +1,8 @@
 import logging
 import os
 
+import pytest
+
 from docai import AnnotationClient
 from docai.annotations.layoutlm_utils import normalize_ner_annotation_for_layoutlm
 
@@ -8,21 +10,24 @@ from docai.annotations.layoutlm_utils import normalize_ner_annotation_for_layout
 
 logging.basicConfig(level=logging.INFO)
 
-# Get API Key from https://docs.butlerlabs.ai/reference/uploading-documents-to-the-rest-api#get-your-api-key
-def test_annotations():
-    api_key = os.environ["BUTLER_API_KEY"]
 
-    # Find your model's uuid
-    model_id = os.environ["MODEL_ID"]
+@pytest.mark.e2e_tests
+class TestAnnotationClient:
+    # Get API Key from https://docs.butlerlabs.ai/reference/uploading-documents-to-the-rest-api#get-your-api-key
+    def test_annotations():
+        api_key = os.environ["BUTLER_API_KEY"]
 
-    annotations = AnnotationClient(api_key).load_annotations(
-        model_id,
-        load_all_pages=True,
-    )
+        # Find your model's uuid
+        model_id = os.environ["MODEL_ID"]
 
-    annotations_as_ner = annotations.as_ner(as_iob=True)
+        annotations = AnnotationClient(api_key).load_annotations(
+            model_id,
+            load_all_pages=True,
+        )
 
-    # Normalize NER annotations by 1000 to match LayoutLM expected bounding box format
-    annotations_as_ner = list(map(normalize_ner_annotation_for_layoutlm, annotations_as_ner))
+        annotations_as_ner = annotations.as_ner(as_iob=True)
 
-    assert annotations_as_ner is not None
+        # Normalize NER annotations by 1000 to match LayoutLM expected bounding box format
+        annotations_as_ner = list(map(normalize_ner_annotation_for_layoutlm, annotations_as_ner))
+
+        assert annotations_as_ner is not None

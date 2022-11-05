@@ -14,8 +14,11 @@ line_length = 120
 include_trailing_comma = true
 
 [tool.pytest.ini_options]
+markers = [
+    "unit_tests: mark a test as one of the normal unit tests.",
+    "e2e_tests: mark a test as one of e2e tests.",
+]
 filterwarnings = [
     "ignore::DeprecationWarning",
 ]
 norecursedirs = ".venv data"
-

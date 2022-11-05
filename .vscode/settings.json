@@ -14,4 +14,9 @@
   "search.exclude": {
     "**/.venv": true
   },
+  "python.testing.pytestArgs": [
+    "docai"
+  ],
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true,
 }
