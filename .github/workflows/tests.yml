@@ -19,20 +19,20 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt install poppler-utils -y
-          python -m pip install --upgrade pipenv wheel
-      - id: cache-pipenv
+          python -m pip install --upgrade poetry wheel
+      - id: cache-poetry
         uses: actions/cache@v3
         with:
           path: .venv
-          key: ${{ runner.os }}-pipenv-${{ hashFiles('**/Pipfile.lock') }}
-      - name: Install pipenv dependencies
-        if: steps.cache-pipenv.outputs.cache-hit != 'true'
+          key: ${{ runner.os }}-python${{ matrix.python-version }}-poetry-${{ hashFiles('**/poetry.lock') }}
+      - name: Install poetry dependencies
+        if: steps.cache-poetry.outputs.cache-hit != 'true'
         run: |
-          PIPENV_VENV_IN_PROJECT=1 pipenv install -d
+          poetry install
       - name: Run E2E Tests
         env:
           BUTLER_API_KEY: ${{secrets.BUTLER_API_KEY}}
           QUEUE_ID: ${{secrets.QUEUE_ID}}
           MODEL_ID: ${{secrets.MODEL_ID}}
         run: |
-          pipenv run pytest
+          poetry run pytest

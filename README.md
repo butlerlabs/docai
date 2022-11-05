@@ -1,24 +1,23 @@
 # Butler Doc AI
-
 Welcome to [Butler Doc AI](https://butlerlabs.ai)
 
 ## Requirements
-
 Python >= 3.7
 
 ## Installation & Usage
-
-### pip install
-
+To install Doc AI with pip:
 ```sh
 pip install docai-py
 ```
 
-### Misc packages that might be needed to be installed on your environment
-- Poppler
+### System Dependencies
+#### Mac
+- Install [poppler](http://macappstore.org/poppler/)
+
+#### Linux
+- Install poppler-utils via your package manager
 
 ## Getting Started
-
 Please follow the [installation procedure](#installation--usage) and then run the following:
 
 ```python
@@ -37,33 +36,60 @@ print(extraction_results)
 ```
 
 ## Maintain
-
+### Install Packages for Development
+Install [poetry](https://python-poetry.org/docs/#installation) on your host machine
 ```sh
-PIPENV_VENV_IN_PROJECT=1 pipenv install -d
+poetry install
 ```
 
+### Butler REST API Codegen
 To regenerate code updates to REST API:
-
 ```sh
 openapi-python-client update --url https://app.butlerlabs.ai/api/docs-json --config codegen.yaml
 ```
 
-and make manual updates to `docai/__init.py__` if needed
+### Running Unit Tests
+To run unit tests:
+```sh
+poetry run pytest
+```
 
-To publish a new version:
+### Adding a New Dependency
+To add a new pip package dependency, see [poetry add](https://python-poetry.org/docs/cli/#add).
+For versioning, it is best to use the minimum version that works, combined with `^`, `~`, or `>=` and `<` checks.
+For example:
+- `poetry add my-package@^1.2.3` is a shorthand for `>=1.2.3,<2.0.0`
+- `poetry add my-package@~1.2.3` is a shorthand for `>=1.2.3,<1.3.0`
+- `poetry add "my-package>=1.2.3,<4.5.6"`
 
-Update `setup.py` to have a new version number
+For development only dependencies, make sure to include the `--dev` flag.
+
+### Build and Publish
+
+#### Build and Publish Setup
+```sh
+# setup for testpypi
+poetry config repositories.testpypi https://test.pypi.org/legacy/
+poetry config pypi-token.testpypi <testpypi token>
+
+# setup for pypi
+poetry config repositories.pypi https://pypi.org/legacy/
+poetry config pypi-token.pypi <pypi token>
+```
+
+#### Build and Publish Procedure
+Update `pyproject.toml` and `docai/__init__.py` to have a new version number
 
 ```sh
 # build packages
-python -m build
+poetry build
 
 # upload to test pypi
-python -m twine upload --repository testpypi --skip-existing dist/* --verbose
+poetry publish -r testpypi
 
 # test install from test pypi
 pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple docai-py
 
-# Upload to real pypi if things checkout
-python -m twine upload --skip-existing dist/* --verbose
+# upload to real pypi
+poetry publish -r pypi
 ```

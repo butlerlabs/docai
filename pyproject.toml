@@ -1,3 +1,50 @@
+[tool.poetry]
+name = "docai-py"
+license = "Apache-2.0"
+version = "0.1.0"
+description = "Butler Doc AI"
+authors = [
+    "Butler Labs <support@butlerlabs.ai>",
+]
+homepage = "https://butlerlabs.ai"
+documentation = "https://docs.butlerlabs.ai"
+readme = "README.md"
+keywords = [
+    "Document AI",
+    "Document Processing",
+    "OCR",
+    "LayoutLM",
+]
+packages = [
+    { include = "docai" },
+]
+
+[tool.poetry.dependencies]
+# Core dependencies
+python = "^3.7"
+attrs = ">=21.3.0,<23.0.0"
+httpx = ">=0.15.4,<0.24.0"
+pdf2image = "^1.14.0"
+pillow = ">=8.0.0,<10.0.0"
+python-dateutil = "~2.8.1"
+typing-extensions = "^4.0.0"
+# ML dependencies
+# longer term, we may want to break these out into extras
+evaluate = "^0.3.0"
+numpy = "^1.17.0"
+seqeval = "^1.2.2"
+transformers = "^4.20.0"
+
+[tool.poetry.dev-dependencies]
+black = "^22.10.0"
+isort = "~5.0.5"
+openapi-python-client = "==0.11.6"
+pytest = "^7.2.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
 [tool.black]
 line_length = 120
 target_version = ['py38']
