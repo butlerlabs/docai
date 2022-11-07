@@ -10,6 +10,9 @@ pdf2image = "*"
 pillow = "*"
 python-dateutil = "~=2.8.1"
 typing-extensions = "*"
+transformers = "*"
+evaluate = "*"
+numpy = "*"
 
 [dev-packages]
 black = "*"
