@@ -6,8 +6,6 @@ import pytest
 from docai import AnnotationClient
 from docai.annotations.layoutlm_utils import normalize_ner_annotation_for_layoutlm
 
-# Run using 'python -m docai.test.test_load_annotations'
-
 logging.basicConfig(level=logging.INFO)
 
 

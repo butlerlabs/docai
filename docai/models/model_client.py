@@ -11,7 +11,7 @@ from docai.models.model_utils import modelFieldToFieldDto, modelTableToTableDto
 
 
 class ModelClient(BaseClient):
-    def clone_model(self, model_id: str, model_name: str) -> ModelInfoDto:
+    def clone_model_schema(self, model_id: str, model_name: str) -> ModelInfoDto:
         """
         Uses the given model as a base, and clones all fields and tables to a new model
 

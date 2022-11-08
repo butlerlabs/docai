@@ -51,7 +51,9 @@ openapi-python-client update --url https://app.butlerlabs.ai/api/docs-json --con
 ### Running Unit Tests
 To run unit tests:
 ```sh
-poetry run pytest
+poetry run pytest -v -m unit_tests
+
+Alternatively, you can also use VSCode's "Testing" tab to run/debug individual tests
 ```
 
 ### Adding a New Dependency

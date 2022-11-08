@@ -5,8 +5,6 @@ import pytest
 
 from docai import PredictionClient
 
-# Run using 'python -m docai.test.test_extract_document'
-
 logging.basicConfig(level=logging.INFO)
 
 

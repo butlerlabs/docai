@@ -102,7 +102,7 @@ class TestModelClient:
 
             yield
 
-    def test_clone_model(self):
+    def test_clone_model_schema(self):
 
         dr = Response(
             status_code=200,
@@ -116,5 +116,5 @@ class TestModelClient:
         self.get_document_type_schema_patch.return_value = dr
         self.create_custom_model_patch.return_value = mi
 
-        clone_res = ModelClient("api-key").clone_model(model_id="model-id", model_name="cloned model name")
+        clone_res = ModelClient("api-key").clone_model_schema(model_id="model-id", model_name="cloned model name")
         assert clone_res.id == SAMPLE_MODEL_INFO_DICT["id"]
