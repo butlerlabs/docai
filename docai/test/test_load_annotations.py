@@ -14,7 +14,7 @@ logging.basicConfig(level=logging.INFO)
 @pytest.mark.e2e_tests
 class TestAnnotationClient:
     # Get API Key from https://docs.butlerlabs.ai/reference/uploading-documents-to-the-rest-api#get-your-api-key
-    def test_annotations():
+    def test_annotations(self):
         api_key = os.environ["BUTLER_API_KEY"]
 
         # Find your model's uuid
