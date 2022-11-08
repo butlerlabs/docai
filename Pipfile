@@ -13,6 +13,7 @@ typing-extensions = "*"
 transformers = "*"
 evaluate = "*"
 numpy = "*"
+seqeval = "*"
 
 [dev-packages]
 black = "*"
