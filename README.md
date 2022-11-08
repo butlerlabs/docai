@@ -73,7 +73,7 @@ poetry config repositories.testpypi https://test.pypi.org/legacy/
 poetry config pypi-token.testpypi <testpypi token>
 
 # setup for pypi
-poetry config repositories.pypi https://pypi.org/legacy/
+poetry config repositories.pypi https://upload.pypi.org/legacy/
 poetry config pypi-token.pypi <pypi token>
 ```
 
