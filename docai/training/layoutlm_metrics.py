@@ -1,8 +1,14 @@
-from typing import Callable, Dict, List, Literal
+import sys
+from typing import Callable, Dict, List
 
 import evaluate
 import numpy as np
 from transformers import EvalPrediction
+
+if sys.version_info >= (3, 8):
+    from typing import Literal
+else:
+    from typing_extensions import Literal
 
 SPECIAL_TOKEN = -100
 
