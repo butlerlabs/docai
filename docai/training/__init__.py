@@ -1,0 +1,1 @@
+from docai.training.layoutlm_metrics import generate_layoutlm_compute_eval_metric_fn
