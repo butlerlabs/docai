@@ -1,6 +1,6 @@
 # Butler DocAI
 
-DocAI helps developers quickly build document, image and text processing pipelines using open source and cloud-based machine learning models for a wide range of applications
+DocAI helps developers quickly build document, image and text processing pipelines using open source and cloud-based machine learning models for a wide range of applications.
 
 ---
 
