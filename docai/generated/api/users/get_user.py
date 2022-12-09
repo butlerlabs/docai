@@ -1,4 +1,4 @@
-from typing import Any, Dict, Optional, Union, cast
+from typing import Any, Dict, Optional
 
 import httpx
 
@@ -26,18 +26,15 @@ def _get_kwargs(
     }
 
 
-def _parse_response(*, response: httpx.Response) -> Optional[Union[Any, UserInfoResultDto]]:
+def _parse_response(*, response: httpx.Response) -> Optional[UserInfoResultDto]:
     if response.status_code == 200:
         response_200 = UserInfoResultDto.from_dict(response.json())
 
         return response_200
-    if response.status_code == 404:
-        response_404 = cast(Any, None)
-        return response_404
     return None
 
 
-def _build_response(*, response: httpx.Response) -> Response[Union[Any, UserInfoResultDto]]:
+def _build_response(*, response: httpx.Response) -> Response[UserInfoResultDto]:
     return Response(
         status_code=response.status_code,
         content=response.content,
@@ -50,13 +47,13 @@ def sync_detailed(
     user_id: str,
     *,
     client: AuthenticatedClient,
-) -> Response[Union[Any, UserInfoResultDto]]:
+) -> Response[UserInfoResultDto]:
     """
     Args:
         user_id (str):
 
     Returns:
-        Response[Union[Any, UserInfoResultDto]]
+        Response[UserInfoResultDto]
     """
 
     kwargs = _get_kwargs(
@@ -76,13 +73,13 @@ def sync(
     user_id: str,
     *,
     client: AuthenticatedClient,
-) -> Optional[Union[Any, UserInfoResultDto]]:
+) -> Optional[UserInfoResultDto]:
     """
     Args:
         user_id (str):
 
     Returns:
-        Response[Union[Any, UserInfoResultDto]]
+        Response[UserInfoResultDto]
     """
 
     return sync_detailed(
@@ -95,13 +92,13 @@ async def asyncio_detailed(
     user_id: str,
     *,
     client: AuthenticatedClient,
-) -> Response[Union[Any, UserInfoResultDto]]:
+) -> Response[UserInfoResultDto]:
     """
     Args:
         user_id (str):
 
     Returns:
-        Response[Union[Any, UserInfoResultDto]]
+        Response[UserInfoResultDto]
     """
 
     kwargs = _get_kwargs(
@@ -119,13 +116,13 @@ async def asyncio(
     user_id: str,
     *,
     client: AuthenticatedClient,
-) -> Optional[Union[Any, UserInfoResultDto]]:
+) -> Optional[UserInfoResultDto]:
     """
     Args:
         user_id (str):
 
     Returns:
-        Response[Union[Any, UserInfoResultDto]]
+        Response[UserInfoResultDto]
     """
 
     return (

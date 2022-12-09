@@ -93,7 +93,7 @@ def sync_detailed(
     industry: Union[Unset, None, IndustryTag] = UNSET,
     sort_by: Union[Unset, None, LibraryModelSortBy] = UNSET,
 ) -> Response[PaginatedLibraryModelDto]:
-    """Get a page of library models
+    """Get a page of library models.
 
     Args:
         after_id (Union[Unset, None, str]):
@@ -138,7 +138,7 @@ def sync(
     industry: Union[Unset, None, IndustryTag] = UNSET,
     sort_by: Union[Unset, None, LibraryModelSortBy] = UNSET,
 ) -> Optional[PaginatedLibraryModelDto]:
-    """Get a page of library models
+    """Get a page of library models.
 
     Args:
         after_id (Union[Unset, None, str]):
@@ -176,7 +176,7 @@ async def asyncio_detailed(
     industry: Union[Unset, None, IndustryTag] = UNSET,
     sort_by: Union[Unset, None, LibraryModelSortBy] = UNSET,
 ) -> Response[PaginatedLibraryModelDto]:
-    """Get a page of library models
+    """Get a page of library models.
 
     Args:
         after_id (Union[Unset, None, str]):
@@ -219,7 +219,7 @@ async def asyncio(
     industry: Union[Unset, None, IndustryTag] = UNSET,
     sort_by: Union[Unset, None, LibraryModelSortBy] = UNSET,
 ) -> Optional[PaginatedLibraryModelDto]:
-    """Get a page of library models
+    """Get a page of library models.
 
     Args:
         after_id (Union[Unset, None, str]):

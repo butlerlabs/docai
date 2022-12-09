@@ -36,10 +36,10 @@ def _get_kwargs(
 
 
 def _parse_response(*, response: httpx.Response) -> Optional[ImageClassificationResultDto]:
-    if response.status_code == 200:
-        response_200 = ImageClassificationResultDto.from_dict(response.json())
+    if response.status_code == 201:
+        response_201 = ImageClassificationResultDto.from_dict(response.json())
 
-        return response_200
+        return response_201
     return None
 
 
@@ -59,7 +59,7 @@ def sync_detailed(
     multipart_data: ClassifyImageMultipartData,
     json_body: SingleFileUrlUploadDto,
 ) -> Response[ImageClassificationResultDto]:
-    """Upload images and trigger image classification
+    """Upload images and trigger image classification.
 
     Args:
         model_id (str):
@@ -92,7 +92,7 @@ def sync(
     multipart_data: ClassifyImageMultipartData,
     json_body: SingleFileUrlUploadDto,
 ) -> Optional[ImageClassificationResultDto]:
-    """Upload images and trigger image classification
+    """Upload images and trigger image classification.
 
     Args:
         model_id (str):
@@ -118,7 +118,7 @@ async def asyncio_detailed(
     multipart_data: ClassifyImageMultipartData,
     json_body: SingleFileUrlUploadDto,
 ) -> Response[ImageClassificationResultDto]:
-    """Upload images and trigger image classification
+    """Upload images and trigger image classification.
 
     Args:
         model_id (str):
@@ -149,7 +149,7 @@ async def asyncio(
     multipart_data: ClassifyImageMultipartData,
     json_body: SingleFileUrlUploadDto,
 ) -> Optional[ImageClassificationResultDto]:
-    """Upload images and trigger image classification
+    """Upload images and trigger image classification.
 
     Args:
         model_id (str):

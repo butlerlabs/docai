@@ -1,9 +1,10 @@
-from typing import Any, Dict
+from typing import Any, Dict, Optional
 
 import httpx
 
 from ...client import Client
 from ...models.login_body_dto import LoginBodyDto
+from ...models.login_response_dto import LoginResponseDto
 from ...types import Response
 
 
@@ -29,12 +30,20 @@ def _get_kwargs(
     }
 
 
-def _build_response(*, response: httpx.Response) -> Response[Any]:
+def _parse_response(*, response: httpx.Response) -> Optional[LoginResponseDto]:
+    if response.status_code == 201:
+        response_201 = LoginResponseDto.from_dict(response.json())
+
+        return response_201
+    return None
+
+
+def _build_response(*, response: httpx.Response) -> Response[LoginResponseDto]:
     return Response(
         status_code=response.status_code,
         content=response.content,
         headers=response.headers,
-        parsed=None,
+        parsed=_parse_response(response=response),
     )
 
 
@@ -42,14 +51,14 @@ def sync_detailed(
     *,
     client: Client,
     json_body: LoginBodyDto,
-) -> Response[Any]:
-    """Authenticates and authorizes the user to access the API
+) -> Response[LoginResponseDto]:
+    """Authenticates and authorizes the user to access the API.
 
     Args:
         json_body (LoginBodyDto):
 
     Returns:
-        Response[Any]
+        Response[LoginResponseDto]
     """
 
     kwargs = _get_kwargs(
@@ -65,18 +74,38 @@ def sync_detailed(
     return _build_response(response=response)
 
 
-async def asyncio_detailed(
+def sync(
     *,
     client: Client,
     json_body: LoginBodyDto,
-) -> Response[Any]:
-    """Authenticates and authorizes the user to access the API
+) -> Optional[LoginResponseDto]:
+    """Authenticates and authorizes the user to access the API.
 
     Args:
         json_body (LoginBodyDto):
 
     Returns:
-        Response[Any]
+        Response[LoginResponseDto]
+    """
+
+    return sync_detailed(
+        client=client,
+        json_body=json_body,
+    ).parsed
+
+
+async def asyncio_detailed(
+    *,
+    client: Client,
+    json_body: LoginBodyDto,
+) -> Response[LoginResponseDto]:
+    """Authenticates and authorizes the user to access the API.
+
+    Args:
+        json_body (LoginBodyDto):
+
+    Returns:
+        Response[LoginResponseDto]
     """
 
     kwargs = _get_kwargs(
@@ -88,3 +117,25 @@ async def asyncio_detailed(
         response = await _client.request(**kwargs)
 
     return _build_response(response=response)
+
+
+async def asyncio(
+    *,
+    client: Client,
+    json_body: LoginBodyDto,
+) -> Optional[LoginResponseDto]:
+    """Authenticates and authorizes the user to access the API.
+
+    Args:
+        json_body (LoginBodyDto):
+
+    Returns:
+        Response[LoginResponseDto]
+    """
+
+    return (
+        await asyncio_detailed(
+            client=client,
+            json_body=json_body,
+        )
+    ).parsed

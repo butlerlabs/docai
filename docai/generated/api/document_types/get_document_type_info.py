@@ -48,7 +48,7 @@ def sync_detailed(
     *,
     client: AuthenticatedClient,
 ) -> Response[DocumentTypeInfoDto]:
-    """Get a document type's info, by ID
+    """Get a document type's info, by ID.
 
     Args:
         doc_type_id (str):
@@ -75,7 +75,7 @@ def sync(
     *,
     client: AuthenticatedClient,
 ) -> Optional[DocumentTypeInfoDto]:
-    """Get a document type's info, by ID
+    """Get a document type's info, by ID.
 
     Args:
         doc_type_id (str):
@@ -95,7 +95,7 @@ async def asyncio_detailed(
     *,
     client: AuthenticatedClient,
 ) -> Response[DocumentTypeInfoDto]:
-    """Get a document type's info, by ID
+    """Get a document type's info, by ID.
 
     Args:
         doc_type_id (str):
@@ -120,7 +120,7 @@ async def asyncio(
     *,
     client: AuthenticatedClient,
 ) -> Optional[DocumentTypeInfoDto]:
-    """Get a document type's info, by ID
+    """Get a document type's info, by ID.
 
     Args:
         doc_type_id (str):

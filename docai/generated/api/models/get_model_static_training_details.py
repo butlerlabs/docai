@@ -82,7 +82,7 @@ def sync_detailed(
     sort_order: Union[Unset, None, SortOrder] = UNSET,
     sort_by: Union[Unset, None, TrainingDetailsSortBy] = UNSET,
 ) -> Response[ModelStaticTrainingDetailsDto]:
-    """Get static training details of a model
+    """Get static training details of a model.
 
     Args:
         id (str):
@@ -124,7 +124,7 @@ def sync(
     sort_order: Union[Unset, None, SortOrder] = UNSET,
     sort_by: Union[Unset, None, TrainingDetailsSortBy] = UNSET,
 ) -> Optional[ModelStaticTrainingDetailsDto]:
-    """Get static training details of a model
+    """Get static training details of a model.
 
     Args:
         id (str):
@@ -159,7 +159,7 @@ async def asyncio_detailed(
     sort_order: Union[Unset, None, SortOrder] = UNSET,
     sort_by: Union[Unset, None, TrainingDetailsSortBy] = UNSET,
 ) -> Response[ModelStaticTrainingDetailsDto]:
-    """Get static training details of a model
+    """Get static training details of a model.
 
     Args:
         id (str):
@@ -199,7 +199,7 @@ async def asyncio(
     sort_order: Union[Unset, None, SortOrder] = UNSET,
     sort_by: Union[Unset, None, TrainingDetailsSortBy] = UNSET,
 ) -> Optional[ModelStaticTrainingDetailsDto]:
-    """Get static training details of a model
+    """Get static training details of a model.
 
     Args:
         id (str):

@@ -46,7 +46,7 @@ def sync_detailed(
     *,
     client: AuthenticatedClient,
 ) -> Response[UserTourDto]:
-    """Gets an object with the active step for each tour
+    """Gets an object with the active step for each tour.
 
     Returns:
         Response[UserTourDto]
@@ -68,7 +68,7 @@ def sync(
     *,
     client: AuthenticatedClient,
 ) -> Optional[UserTourDto]:
-    """Gets an object with the active step for each tour
+    """Gets an object with the active step for each tour.
 
     Returns:
         Response[UserTourDto]
@@ -83,7 +83,7 @@ async def asyncio_detailed(
     *,
     client: AuthenticatedClient,
 ) -> Response[UserTourDto]:
-    """Gets an object with the active step for each tour
+    """Gets an object with the active step for each tour.
 
     Returns:
         Response[UserTourDto]
@@ -103,7 +103,7 @@ async def asyncio(
     *,
     client: AuthenticatedClient,
 ) -> Optional[UserTourDto]:
-    """Gets an object with the active step for each tour
+    """Gets an object with the active step for each tour.
 
     Returns:
         Response[UserTourDto]

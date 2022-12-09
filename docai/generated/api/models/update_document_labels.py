@@ -47,7 +47,7 @@ def sync_detailed(
     client: AuthenticatedClient,
     json_body: PutDocumentLabelsDto,
 ) -> Response[Any]:
-    """Update labels for a specific document
+    """Update labels for a specific document.
 
     Args:
         id (str):
@@ -80,7 +80,7 @@ async def asyncio_detailed(
     client: AuthenticatedClient,
     json_body: PutDocumentLabelsDto,
 ) -> Response[Any]:
-    """Update labels for a specific document
+    """Update labels for a specific document.
 
     Args:
         id (str):

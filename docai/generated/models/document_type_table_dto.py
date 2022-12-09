@@ -11,9 +11,9 @@ T = TypeVar("T", bound="DocumentTypeTableDto")
 class DocumentTypeTableDto:
     """
     Attributes:
-        id (str): Table ID
-        name (str): Table display name
-        columns (List[DocumentTypeFieldDto]): Table columns
+        id (str): Table ID.
+        name (str): Table display name.
+        columns (List[DocumentTypeFieldDto]): Table columns.
     """
 
     id: str

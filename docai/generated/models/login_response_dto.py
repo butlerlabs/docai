@@ -1,28 +1,28 @@
-from typing import Any, Dict, List, Type, TypeVar, cast
+from typing import Any, Dict, List, Type, TypeVar
 
 import attr
 
-T = TypeVar("T", bound="LabeledExampleDocumentsDto")
+T = TypeVar("T", bound="LoginResponseDto")
 
 
 @attr.s(auto_attribs=True)
-class LabeledExampleDocumentsDto:
+class LoginResponseDto:
     """
     Attributes:
-        example_document_ids (List[str]): A list of labeled example document ids
+        api_token (str): API token.
     """
 
-    example_document_ids: List[str]
+    api_token: str
     additional_properties: Dict[str, Any] = attr.ib(init=False, factory=dict)
 
     def to_dict(self) -> Dict[str, Any]:
-        example_document_ids = self.example_document_ids
+        api_token = self.api_token
 
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
             {
-                "exampleDocumentIds": example_document_ids,
+                "apiToken": api_token,
             }
         )
 
@@ -31,14 +31,14 @@ class LabeledExampleDocumentsDto:
     @classmethod
     def from_dict(cls: Type[T], src_dict: Dict[str, Any]) -> T:
         d = src_dict.copy()
-        example_document_ids = cast(List[str], d.pop("exampleDocumentIds"))
+        api_token = d.pop("apiToken")
 
-        labeled_example_documents_dto = cls(
-            example_document_ids=example_document_ids,
+        login_response_dto = cls(
+            api_token=api_token,
         )
 
-        labeled_example_documents_dto.additional_properties = d
-        return labeled_example_documents_dto
+        login_response_dto.additional_properties = d
+        return login_response_dto
 
     @property
     def additional_keys(self) -> List[str]:

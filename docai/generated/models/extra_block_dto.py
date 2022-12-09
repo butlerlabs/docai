@@ -11,7 +11,7 @@ T = TypeVar("T", bound="ExtraBlockDto")
 class ExtraBlockDto:
     """
     Attributes:
-        text (str): The text of this block
+        text (str): The text of this block.
         bounding_box (BoundingBoxDto):
     """
 

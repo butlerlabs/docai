@@ -9,9 +9,9 @@ T = TypeVar("T", bound="EnvironmentDto")
 class EnvironmentDto:
     """
     Attributes:
-        auth_0_client_id (str): Auth0 client ID
-        analytics_write_key (str): Segment write key
-        deployment (str): Deployment name
+        auth_0_client_id (str): Auth0 client ID.
+        analytics_write_key (str): Segment write key.
+        deployment (str): Deployment name.
     """
 
     auth_0_client_id: str

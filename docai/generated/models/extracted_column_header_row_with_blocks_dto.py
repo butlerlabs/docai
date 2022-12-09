@@ -11,8 +11,8 @@ T = TypeVar("T", bound="ExtractedColumnHeaderRowWithBlocksDto")
 class ExtractedColumnHeaderRowWithBlocksDto:
     """
     Attributes:
-        id (str): Id of the extracted column header row
-        cells (List[ExtractedColumnHeaderWithBlocksDto]): A row of column headers with associated blocks
+        id (str): ID of the extracted column header row.
+        cells (List[ExtractedColumnHeaderWithBlocksDto]): A row of column headers with associated blocks.
     """
 
     id: str

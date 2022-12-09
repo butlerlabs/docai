@@ -14,7 +14,7 @@ class MlModelVersionDto:
         model_id (str): The id of the ml model.
         version_id (str): The version id of the ml model.
         version (float): The version number.
-        endpoint_id (Union[Unset, str]): The active endpoint id of this model version.
+        endpoint_id (Union[Unset, str]): The active endpoint ID of this model version.
     """
 
     model_id: str

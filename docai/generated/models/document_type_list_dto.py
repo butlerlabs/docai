@@ -11,7 +11,7 @@ T = TypeVar("T", bound="DocumentTypeListDto")
 class DocumentTypeListDto:
     """
     Attributes:
-        items (List[DocumentTypeDto]): List of document types
+        items (List[DocumentTypeDto]): List of document types.
     """
 
     items: List[DocumentTypeDto]

@@ -13,7 +13,7 @@ T = TypeVar("T", bound="ExtractionResultStatusDto")
 class ExtractionResultStatusDto:
     """
     Attributes:
-        document_id (str): ID of the document
+        document_id (str): ID of the document.
         document_status (DocumentStatus):
         document_confidence (Union[Unset, DocExConfidence]):
     """

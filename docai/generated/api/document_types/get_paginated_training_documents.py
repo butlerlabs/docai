@@ -91,7 +91,7 @@ def sync_detailed(
     sort_by: Union[Unset, None, TrainingDocumentSortBy] = UNSET,
     status: Union[Unset, None, TrainingDocumentStatusFilter] = UNSET,
 ) -> Response[PaginatedTrainingDocumentDetailDto]:
-    """Get a paginated listing of training documents for a document type by ID
+    """Get a paginated listing of training documents for a document type by ID.
 
     Args:
         doc_type_id (str):
@@ -136,7 +136,7 @@ def sync(
     sort_by: Union[Unset, None, TrainingDocumentSortBy] = UNSET,
     status: Union[Unset, None, TrainingDocumentStatusFilter] = UNSET,
 ) -> Optional[PaginatedTrainingDocumentDetailDto]:
-    """Get a paginated listing of training documents for a document type by ID
+    """Get a paginated listing of training documents for a document type by ID.
 
     Args:
         doc_type_id (str):
@@ -174,7 +174,7 @@ async def asyncio_detailed(
     sort_by: Union[Unset, None, TrainingDocumentSortBy] = UNSET,
     status: Union[Unset, None, TrainingDocumentStatusFilter] = UNSET,
 ) -> Response[PaginatedTrainingDocumentDetailDto]:
-    """Get a paginated listing of training documents for a document type by ID
+    """Get a paginated listing of training documents for a document type by ID.
 
     Args:
         doc_type_id (str):
@@ -217,7 +217,7 @@ async def asyncio(
     sort_by: Union[Unset, None, TrainingDocumentSortBy] = UNSET,
     status: Union[Unset, None, TrainingDocumentStatusFilter] = UNSET,
 ) -> Optional[PaginatedTrainingDocumentDetailDto]:
-    """Get a paginated listing of training documents for a document type by ID
+    """Get a paginated listing of training documents for a document type by ID.
 
     Args:
         doc_type_id (str):

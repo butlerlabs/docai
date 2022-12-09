@@ -11,11 +11,11 @@ T = TypeVar("T", bound="AllowanceDto")
 class AllowanceDto:
     """
     Attributes:
-        remaining (float): Allowance currently remaining
+        remaining (float): Allowance currently remaining.
         refresh_interval (AllowanceRefreshInterval):
-        refresh_amount (float): Allowance amount that we refresh to on the refresh interval
+        refresh_amount (float): Allowance amount that we refresh to on the refresh interval.
         next_refresh_time (float): Unix timestamp for next refresh time. When allowance type is Never, this will be a
-            very large number that should be ignored
+            very large number that should be ignored.
     """
 
     remaining: float

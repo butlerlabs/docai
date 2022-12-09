@@ -13,9 +13,9 @@ T = TypeVar("T", bound="CreateModelDto")
 class CreateModelDto:
     """
     Attributes:
-        name (str): The name of the model
-        fields (Union[Unset, List[FieldDto]]): The text and checkbox fields for this document
-        tables (Union[Unset, List[TableDto]]): The tables for this document
+        name (str): The name of the model.
+        fields (Union[Unset, List[FieldDto]]): The text and checkbox fields for this document.
+        tables (Union[Unset, List[TableDto]]): The tables for this document.
     """
 
     name: str

@@ -13,9 +13,9 @@ T = TypeVar("T", bound="TrainingAnnotationDto")
 class TrainingAnnotationDto:
     """
     Attributes:
-        fields (List[SimpleFieldLabeledResultDto]): The text and checkbox fields annotated for this document
-        signatures (List[SignatureFieldLabeledResultDto]): The signature fields annotated for this document
-        tables (List[TrainingTableLabeledResultDto]): The table fields annotated for this document
+        fields (List[SimpleFieldLabeledResultDto]): The text and checkbox fields annotated for this document.
+        signatures (List[SignatureFieldLabeledResultDto]): The signature fields annotated for this document.
+        tables (List[TrainingTableLabeledResultDto]): The table fields annotated for this document.
     """
 
     fields: List[SimpleFieldLabeledResultDto]

@@ -15,8 +15,8 @@ class LibraryModelDto:
         model_type (BaseModelType):
         name (str): Name of the model.
         description (str): Short description of the model.
-        image_url (str): url where the model image is stored.
-        industry (List[IndustryTag]): Array of Industry tags that the model belongs to
+        image_url (str): URL where the model image is stored.
+        industry (List[IndustryTag]): Array of industry tags that the model belongs to.
     """
 
     model_type: BaseModelType

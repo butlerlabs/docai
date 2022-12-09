@@ -48,7 +48,7 @@ def sync_detailed(
     *,
     client: AuthenticatedClient,
 ) -> Response[AppRunStatusDto]:
-    """Get the status of an extraction job started by the upload_documents endpoint
+    """Get the status of an extraction job started by the upload documents endpoint.
 
     Args:
         app_run_id (str):
@@ -75,7 +75,7 @@ def sync(
     *,
     client: AuthenticatedClient,
 ) -> Optional[AppRunStatusDto]:
-    """Get the status of an extraction job started by the upload_documents endpoint
+    """Get the status of an extraction job started by the upload documents endpoint.
 
     Args:
         app_run_id (str):
@@ -95,7 +95,7 @@ async def asyncio_detailed(
     *,
     client: AuthenticatedClient,
 ) -> Response[AppRunStatusDto]:
-    """Get the status of an extraction job started by the upload_documents endpoint
+    """Get the status of an extraction job started by the upload documents endpoint.
 
     Args:
         app_run_id (str):
@@ -120,7 +120,7 @@ async def asyncio(
     *,
     client: AuthenticatedClient,
 ) -> Optional[AppRunStatusDto]:
-    """Get the status of an extraction job started by the upload_documents endpoint
+    """Get the status of an extraction job started by the upload documents endpoint.
 
     Args:
         app_run_id (str):

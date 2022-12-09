@@ -9,7 +9,7 @@ T = TypeVar("T", bound="TrainingColumnDto")
 class TrainingColumnDto:
     """
     Attributes:
-        id (str): The unique id of the column.
+        id (str): The unique ID of the column.
         name (str): The name of the column.
     """
 

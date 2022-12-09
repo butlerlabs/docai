@@ -46,7 +46,7 @@ def sync_detailed(
     *,
     client: AuthenticatedClient,
 ) -> Response[DocumentTypeListDto]:
-    """Get a list of all document types
+    """Get a list of all document types.
 
     Returns:
         Response[DocumentTypeListDto]
@@ -68,7 +68,7 @@ def sync(
     *,
     client: AuthenticatedClient,
 ) -> Optional[DocumentTypeListDto]:
-    """Get a list of all document types
+    """Get a list of all document types.
 
     Returns:
         Response[DocumentTypeListDto]
@@ -83,7 +83,7 @@ async def asyncio_detailed(
     *,
     client: AuthenticatedClient,
 ) -> Response[DocumentTypeListDto]:
-    """Get a list of all document types
+    """Get a list of all document types.
 
     Returns:
         Response[DocumentTypeListDto]
@@ -103,7 +103,7 @@ async def asyncio(
     *,
     client: AuthenticatedClient,
 ) -> Optional[DocumentTypeListDto]:
-    """Get a list of all document types
+    """Get a list of all document types.
 
     Returns:
         Response[DocumentTypeListDto]

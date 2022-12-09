@@ -12,9 +12,9 @@ T = TypeVar("T", bound="BlockDto")
 class BlockDto:
     """
     Attributes:
-        id (str): ID of this block
+        id (str): ID of this block.
         block_type (BlockType):
-        text (str): Text within this block
+        text (str): Text within this block.
         bounding_box (BoundingBoxDto):
     """
 

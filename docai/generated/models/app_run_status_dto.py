@@ -11,7 +11,7 @@ T = TypeVar("T", bound="AppRunStatusDto")
 class AppRunStatusDto:
     """
     Attributes:
-        app_run_id (str):
+        app_run_id (str): ID of the app run.
         status (AppRunStatus):
     """
 

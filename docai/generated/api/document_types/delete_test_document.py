@@ -43,7 +43,7 @@ def sync_detailed(
     *,
     client: AuthenticatedClient,
 ) -> Response[Any]:
-    """Soft Deletes a Test Document, by Id
+    """Soft deletes a test document, by ID.
 
     Args:
         doc_type_id (str):
@@ -73,7 +73,7 @@ async def asyncio_detailed(
     *,
     client: AuthenticatedClient,
 ) -> Response[Any]:
-    """Soft Deletes a Test Document, by Id
+    """Soft deletes a test document, by ID.
 
     Args:
         doc_type_id (str):

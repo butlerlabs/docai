@@ -11,10 +11,10 @@ T = TypeVar("T", bound="PaginatedLibraryModelDto")
 class PaginatedLibraryModelDto:
     """
     Attributes:
-        has_next (bool): Whether there are more pages to fetch after this page
-        has_previous (bool): Whether there are more pages to fetch before this page
-        total_count (float): Total number of items across all pages
-        items (List[LibraryModelDto]): List of Library Models.
+        has_next (bool): Whether there are more pages to fetch after this page.
+        has_previous (bool): Whether there are more pages to fetch before this page.
+        total_count (float): Total number of items across all pages.
+        items (List[LibraryModelDto]): List of library models.
     """
 
     has_next: bool

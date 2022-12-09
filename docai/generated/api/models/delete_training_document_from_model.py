@@ -52,7 +52,7 @@ def sync_detailed(
     *,
     client: AuthenticatedClient,
 ) -> Response[ModelAndDocumentIdParamDto]:
-    """Deletes a Training Document, by Id from a model
+    """Deletes a training document, by ID from a model.
 
     Args:
         id (str):
@@ -82,7 +82,7 @@ def sync(
     *,
     client: AuthenticatedClient,
 ) -> Optional[ModelAndDocumentIdParamDto]:
-    """Deletes a Training Document, by Id from a model
+    """Deletes a training document, by ID from a model.
 
     Args:
         id (str):
@@ -105,7 +105,7 @@ async def asyncio_detailed(
     *,
     client: AuthenticatedClient,
 ) -> Response[ModelAndDocumentIdParamDto]:
-    """Deletes a Training Document, by Id from a model
+    """Deletes a training document, by ID from a model.
 
     Args:
         id (str):
@@ -133,7 +133,7 @@ async def asyncio(
     *,
     client: AuthenticatedClient,
 ) -> Optional[ModelAndDocumentIdParamDto]:
-    """Deletes a Training Document, by Id from a model
+    """Deletes a training document, by ID from a model.
 
     Args:
         id (str):

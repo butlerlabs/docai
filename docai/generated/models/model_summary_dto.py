@@ -14,13 +14,13 @@ T = TypeVar("T", bound="ModelSummaryDto")
 class ModelSummaryDto:
     """
     Attributes:
-        id (str): ID of this model
-        name (str): Name of this model
+        id (str): ID of this model.
+        name (str): Name of this model.
         status (ModelStatus):
         task_type (ModelSummaryTaskType):
         base_model (ModelSummaryBaseModelType):
-        description (str): Description of this model
-        training_failure_reason (Union[Unset, str]): Reason for previous training failure
+        description (str): Description of this model.
+        training_failure_reason (Union[Unset, str]): Reason for previous training failure.
     """
 
     id: str

@@ -2,8 +2,8 @@ from typing import Any, Dict, List, Type, TypeVar, Union
 
 import attr
 
-from ..models.deprecated_extracted_table_with_blocks_dto import DeprecatedExtractedTableWithBlocksDto
-from ..models.extracted_form_fields_with_blocks_dto import ExtractedFormFieldsWithBlocksDto
+from ..models.extracted_form_field_with_blocks_dto import ExtractedFormFieldWithBlocksDto
+from ..models.extracted_table_with_blocks_dto import ExtractedTableWithBlocksDto
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="LabelingResultsWithBlocksDto")
@@ -13,16 +13,16 @@ T = TypeVar("T", bound="LabelingResultsWithBlocksDto")
 class LabelingResultsWithBlocksDto:
     """
     Attributes:
-        id (str): Id of the extracted document
-        form_fields (List[ExtractedFormFieldsWithBlocksDto]): Form Fields extracted from the document, with associated
-            blocks
-        tables (List[DeprecatedExtractedTableWithBlocksDto]): Tables extracted from the document, with associated blocks
-        labeling_start_time (Union[Unset, float]): Millisecond timestamp of when the labeling UI was opened
+        id (str): ID of the extracted document.
+        form_fields (List[ExtractedFormFieldWithBlocksDto]): Form Fields extracted from the document, with associated
+            blocks.
+        tables (List[ExtractedTableWithBlocksDto]): Tables extracted from the document, with associated blocks.
+        labeling_start_time (Union[Unset, float]): Millisecond timestamp of when the labeling UI was opened.
     """
 
     id: str
-    form_fields: List[ExtractedFormFieldsWithBlocksDto]
-    tables: List[DeprecatedExtractedTableWithBlocksDto]
+    form_fields: List[ExtractedFormFieldWithBlocksDto]
+    tables: List[ExtractedTableWithBlocksDto]
     labeling_start_time: Union[Unset, float] = UNSET
     additional_properties: Dict[str, Any] = attr.ib(init=False, factory=dict)
 
@@ -64,14 +64,14 @@ class LabelingResultsWithBlocksDto:
         form_fields = []
         _form_fields = d.pop("formFields")
         for form_fields_item_data in _form_fields:
-            form_fields_item = ExtractedFormFieldsWithBlocksDto.from_dict(form_fields_item_data)
+            form_fields_item = ExtractedFormFieldWithBlocksDto.from_dict(form_fields_item_data)
 
             form_fields.append(form_fields_item)
 
         tables = []
         _tables = d.pop("tables")
         for tables_item_data in _tables:
-            tables_item = DeprecatedExtractedTableWithBlocksDto.from_dict(tables_item_data)
+            tables_item = ExtractedTableWithBlocksDto.from_dict(tables_item_data)
 
             tables.append(tables_item)
 

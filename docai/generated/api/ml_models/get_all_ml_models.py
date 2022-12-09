@@ -46,7 +46,7 @@ def sync_detailed(
     *,
     client: AuthenticatedClient,
 ) -> Response[MlModelListDto]:
-    """Get a list of all ml models
+    """Get a list of all ml models.
 
     Returns:
         Response[MlModelListDto]
@@ -68,7 +68,7 @@ def sync(
     *,
     client: AuthenticatedClient,
 ) -> Optional[MlModelListDto]:
-    """Get a list of all ml models
+    """Get a list of all ml models.
 
     Returns:
         Response[MlModelListDto]
@@ -83,7 +83,7 @@ async def asyncio_detailed(
     *,
     client: AuthenticatedClient,
 ) -> Response[MlModelListDto]:
-    """Get a list of all ml models
+    """Get a list of all ml models.
 
     Returns:
         Response[MlModelListDto]
@@ -103,7 +103,7 @@ async def asyncio(
     *,
     client: AuthenticatedClient,
 ) -> Optional[MlModelListDto]:
-    """Get a list of all ml models
+    """Get a list of all ml models.
 
     Returns:
         Response[MlModelListDto]

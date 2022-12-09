@@ -11,7 +11,7 @@ T = TypeVar("T", bound="MlModelListDto")
 class MlModelListDto:
     """
     Attributes:
-        items (List[MlModelDto]): List of ml models
+        items (List[MlModelDto]): List of ml models.
     """
 
     items: List[MlModelDto]

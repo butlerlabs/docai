@@ -3,9 +3,9 @@ from typing import Any, Dict, List, Type, TypeVar
 import attr
 
 from ..models.block_result_dto import BlockResultDto
-from ..models.deprecated_extracted_table_with_blocks_dto import DeprecatedExtractedTableWithBlocksDto
 from ..models.doc_ex_confidence import DocExConfidence
-from ..models.extracted_form_fields_with_blocks_dto import ExtractedFormFieldsWithBlocksDto
+from ..models.extracted_form_field_with_blocks_dto import ExtractedFormFieldWithBlocksDto
+from ..models.extracted_table_with_blocks_dto import ExtractedTableWithBlocksDto
 
 T = TypeVar("T", bound="ExtractionResultsWithBlocksDto")
 
@@ -14,14 +14,14 @@ T = TypeVar("T", bound="ExtractionResultsWithBlocksDto")
 class ExtractionResultsWithBlocksDto:
     """
     Attributes:
-        id (str): Id of the extracted document
-        file_name (str): Name of the file that these results were extracted from
-        doc_uri (str): Identifier for the hosted document that the results were extracted from
-        mime_type (str): The type of document that the results were extracted from
-        word_blocks (List[BlockResultDto]): Word Blocks extracted from the document, with associated blocks
-        form_fields (List[ExtractedFormFieldsWithBlocksDto]): Form Fields extracted from the document, with associated
-            blocks
-        tables (List[DeprecatedExtractedTableWithBlocksDto]): Tables extracted from the document, with associated blocks
+        id (str): ID of the extracted document.
+        file_name (str): Name of the file that these results were extracted from.
+        doc_uri (str): Identifier for the hosted document that the results were extracted from.
+        mime_type (str): The type of document that the results were extracted from.
+        word_blocks (List[BlockResultDto]): Word blocks extracted from the document.
+        form_fields (List[ExtractedFormFieldWithBlocksDto]): Form Fields extracted from the document, with associated
+            blocks.
+        tables (List[ExtractedTableWithBlocksDto]): Tables extracted from the document, with associated blocks.
         confidence_score (DocExConfidence):
     """
 
@@ -30,8 +30,8 @@ class ExtractionResultsWithBlocksDto:
     doc_uri: str
     mime_type: str
     word_blocks: List[BlockResultDto]
-    form_fields: List[ExtractedFormFieldsWithBlocksDto]
-    tables: List[DeprecatedExtractedTableWithBlocksDto]
+    form_fields: List[ExtractedFormFieldWithBlocksDto]
+    tables: List[ExtractedTableWithBlocksDto]
     confidence_score: DocExConfidence
     additional_properties: Dict[str, Any] = attr.ib(init=False, factory=dict)
 
@@ -98,14 +98,14 @@ class ExtractionResultsWithBlocksDto:
         form_fields = []
         _form_fields = d.pop("formFields")
         for form_fields_item_data in _form_fields:
-            form_fields_item = ExtractedFormFieldsWithBlocksDto.from_dict(form_fields_item_data)
+            form_fields_item = ExtractedFormFieldWithBlocksDto.from_dict(form_fields_item_data)
 
             form_fields.append(form_fields_item)
 
         tables = []
         _tables = d.pop("tables")
         for tables_item_data in _tables:
-            tables_item = DeprecatedExtractedTableWithBlocksDto.from_dict(tables_item_data)
+            tables_item = ExtractedTableWithBlocksDto.from_dict(tables_item_data)
 
             tables.append(tables_item)
 

@@ -9,8 +9,8 @@ T = TypeVar("T", bound="ReviewerDto")
 class ReviewerDto:
     """
     Attributes:
-        id (str): ID of this reviewer
-        email_address (str): Email of this reviewer
+        id (str): ID of this reviewer.
+        email_address (str): Email of this reviewer.
     """
 
     id: str

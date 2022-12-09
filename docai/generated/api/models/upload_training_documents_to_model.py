@@ -45,7 +45,7 @@ def sync_detailed(
     client: AuthenticatedClient,
     multipart_data: UploadTrainingDocumentsToModelMultipartData,
 ) -> Response[Any]:
-    """Upload documents to the model for Training
+    """Upload documents to the model for training.
 
     Args:
         id (str):
@@ -75,7 +75,7 @@ async def asyncio_detailed(
     client: AuthenticatedClient,
     multipart_data: UploadTrainingDocumentsToModelMultipartData,
 ) -> Response[Any]:
-    """Upload documents to the model for Training
+    """Upload documents to the model for training.
 
     Args:
         id (str):

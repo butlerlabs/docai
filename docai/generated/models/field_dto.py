@@ -11,7 +11,7 @@ T = TypeVar("T", bound="FieldDto")
 class FieldDto:
     """
     Attributes:
-        name (str): The name of the field
+        name (str): The name of the field.
         type (ModelFieldType):
     """
 

@@ -28,10 +28,10 @@ def _get_kwargs(
 
 
 def _parse_response(*, response: httpx.Response) -> Optional[ModelDetailsDto]:
-    if response.status_code == 200:
-        response_200 = ModelDetailsDto.from_dict(response.json())
+    if response.status_code == 201:
+        response_201 = ModelDetailsDto.from_dict(response.json())
 
-        return response_200
+        return response_201
     return None
 
 
@@ -49,7 +49,7 @@ def sync_detailed(
     *,
     client: AuthenticatedClient,
 ) -> Response[ModelDetailsDto]:
-    """Create a new model of the specified type
+    """Create a new model of the specified type.
 
     Args:
         model_type (BaseModelType):
@@ -76,7 +76,7 @@ def sync(
     *,
     client: AuthenticatedClient,
 ) -> Optional[ModelDetailsDto]:
-    """Create a new model of the specified type
+    """Create a new model of the specified type.
 
     Args:
         model_type (BaseModelType):
@@ -96,7 +96,7 @@ async def asyncio_detailed(
     *,
     client: AuthenticatedClient,
 ) -> Response[ModelDetailsDto]:
-    """Create a new model of the specified type
+    """Create a new model of the specified type.
 
     Args:
         model_type (BaseModelType):
@@ -121,7 +121,7 @@ async def asyncio(
     *,
     client: AuthenticatedClient,
 ) -> Optional[ModelDetailsDto]:
-    """Create a new model of the specified type
+    """Create a new model of the specified type.
 
     Args:
         model_type (BaseModelType):

@@ -9,9 +9,9 @@ T = TypeVar("T", bound="BillingWebhookDto")
 class BillingWebhookDto:
     """
     Attributes:
-        id (str): Uniquely identifies a webhook
+        id (str): Uniquely identifies a webhook.
         webhook_status (str): The webhooks object is unavailable on the first webhook call for the event. For subsequent
-            calls, this attribute holds the status from after the last retry
+            calls, this attribute holds the status from after the last retry.
     """
 
     id: str

@@ -11,7 +11,7 @@ T = TypeVar("T", bound="TableUpdateDto")
 class TableUpdateDto:
     """
     Attributes:
-        name (str): Document table display name
+        name (str): Document table display name.
         columns (List[ColumnFieldUpdateDto]):
     """
 

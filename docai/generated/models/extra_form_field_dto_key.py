@@ -7,7 +7,7 @@ T = TypeVar("T", bound="ExtraFormFieldDtoKey")
 
 @attr.s(auto_attribs=True)
 class ExtraFormFieldDtoKey:
-    """This form-field's key. `null` if not found"""
+    """This form-field's key, null if not found."""
 
     additional_properties: Dict[str, Any] = attr.ib(init=False, factory=dict)
 

@@ -52,7 +52,7 @@ def sync_detailed(
     *,
     client: AuthenticatedClient,
 ) -> Response[DocumentEnhancedResultDto]:
-    """Get enhanced results for a document
+    """Get enhanced results for a document.
 
     Args:
         id (str):
@@ -82,7 +82,7 @@ def sync(
     *,
     client: AuthenticatedClient,
 ) -> Optional[DocumentEnhancedResultDto]:
-    """Get enhanced results for a document
+    """Get enhanced results for a document.
 
     Args:
         id (str):
@@ -105,7 +105,7 @@ async def asyncio_detailed(
     *,
     client: AuthenticatedClient,
 ) -> Response[DocumentEnhancedResultDto]:
-    """Get enhanced results for a document
+    """Get enhanced results for a document.
 
     Args:
         id (str):
@@ -133,7 +133,7 @@ async def asyncio(
     *,
     client: AuthenticatedClient,
 ) -> Optional[DocumentEnhancedResultDto]:
-    """Get enhanced results for a document
+    """Get enhanced results for a document.
 
     Args:
         id (str):

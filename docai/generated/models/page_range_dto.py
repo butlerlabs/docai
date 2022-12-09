@@ -9,8 +9,8 @@ T = TypeVar("T", bound="PageRangeDto")
 class PageRangeDto:
     """
     Attributes:
-        start_page (float): Page number to start on, inclusive
-        end_page (float): Page number to end on, inclusive
+        start_page (float): Page number to start on, inclusive.
+        end_page (float): Page number to end on, inclusive.
     """
 
     start_page: float

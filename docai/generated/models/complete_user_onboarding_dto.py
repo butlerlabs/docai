@@ -12,7 +12,7 @@ T = TypeVar("T", bound="CompleteUserOnboardingDto")
 class CompleteUserOnboardingDto:
     """
     Attributes:
-        has_pdt_use_case (bool): Whether or not the onboarded customer has a PDT use case
+        has_pdt_use_case (bool): Whether or not the onboarded customer has a PDT use case.
         survey_response (SurveyResponseDto):
         google_ads (GoogleAdsDto):
     """

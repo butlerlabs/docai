@@ -17,17 +17,17 @@ T = TypeVar("T", bound="ExtractionResultsDto")
 class ExtractionResultsDto:
     """
     Attributes:
-        document_id (str): ID of the document
+        document_id (str): ID of the document.
         document_status (DocumentStatus):
-        file_name (str): Name of the uploaded file
-        mime_type (str): Mime Type of the uploaded file
-        document_type (str): Name of the document type
+        file_name (str): Name of the uploaded file.
+        mime_type (str): Mime type of the uploaded file.
+        document_type (str): Name of the document type.
         confidence_score (Union[Unset, DocExConfidence]):
         extraction_range (Union[Unset, ExtractionRangeDto]):
         form_fields (Union[Unset, List[ExtractedFieldDto]]): Extracted form fields of this document. May be undefined if
-            extraction not completed
+            extraction not completed.
         tables (Union[Unset, List[ExtractedTableDto]]): Extracted tables of this document. May be undefined if
-            extraction not completed
+            extraction not completed.
         extra_results (Union[Unset, ExtraResultsDto]):
     """
 

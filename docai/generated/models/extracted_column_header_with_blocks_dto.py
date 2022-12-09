@@ -12,9 +12,9 @@ T = TypeVar("T", bound="ExtractedColumnHeaderWithBlocksDto")
 class ExtractedColumnHeaderWithBlocksDto:
     """
     Attributes:
-        id (str): Id of the extracted column header
+        id (str): ID of the extracted column header.
         column_type (EntityType):
-        column_name (str): Name of the column
+        column_name (str): Name of the column.
         label_field (ExtractedFieldResultsDto):
     """
 

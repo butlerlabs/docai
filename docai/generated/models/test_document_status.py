@@ -2,11 +2,7 @@ from enum import Enum
 
 
 class TestDocumentStatus(str, Enum):
-    UPLOADINGFILE = "UploadingFile"
-    DETECTINGTEXT = "DetectingText"
-    EXTRACTINGDATA = "ExtractingData"
-    REEXTRACTINGDATA = "ReExtractingData"
-    WAITINGFORBUTLEROPSREVIEW = "WaitingForButlerOpsReview"
+    INPROGRESS = "InProgress"
     COMPLETED = "Completed"
     FAILED = "Failed"
 

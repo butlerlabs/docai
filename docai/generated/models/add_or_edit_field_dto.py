@@ -12,7 +12,7 @@ class AddOrEditFieldDto:
     """
     Attributes:
         type (ModelFieldType):
-        name (str): The name for the new field
+        name (str): The name for the new field.
     """
 
     type: ModelFieldType

@@ -11,9 +11,9 @@ T = TypeVar("T", bound="TestDocumentDetailDto")
 class TestDocumentDetailDto:
     """
     Attributes:
-        id (str): The id of the Test Document
-        file_name (str): The file name of the Test Document
-        upload_time (float): The unix timestamp for when the Test Document was uploaded
+        id (str): The ID of the test document.
+        file_name (str): The file name of the test document.
+        upload_time (float): The unix timestamp for when the test document was uploaded.
         status (TestDocumentStatus):
     """
 

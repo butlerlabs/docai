@@ -11,11 +11,11 @@ T = TypeVar("T", bound="QueueDto")
 class QueueDto:
     """
     Attributes:
-        queue_id (str): The ID of the Queue.
-        queue_name (str): The name of the Queue.
-        doc_type_id (str): The ID of the document type associated with this Queue.
-        doc_type_name (str): The name of the document type associated with this Queue.
-        docs_processed (float): Total number of documents processed by this Queue.
+        queue_id (str): ID of the queue.
+        queue_name (str): The name of the queue.
+        doc_type_id (str): The ID of the document type associated with this queue.
+        doc_type_name (str): The name of the document type associated with this queue.
+        docs_processed (float): Total number of documents processed by this queue.
         model_type (BaseModelType):
     """
 

@@ -9,7 +9,7 @@ T = TypeVar("T", bound="UserCreateBodyDto")
 class UserCreateBodyDto:
     """
     Attributes:
-        email_address (str):
+        email_address (str): Email of the user.
     """
 
     email_address: str

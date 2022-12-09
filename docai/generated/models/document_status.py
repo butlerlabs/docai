@@ -2,10 +2,7 @@ from enum import Enum
 
 
 class DocumentStatus(str, Enum):
-    UPLOADINGFILE = "UploadingFile"
-    DETECTINGTEXT = "DetectingText"
-    EXTRACTINGDATA = "ExtractingData"
-    WAITINGFORBUTLEROPSREVIEW = "WaitingForButlerOpsReview"
+    INPROGRESS = "InProgress"
     WAITINGFORUSERREVIEW = "WaitingForUserReview"
     COMPLETED = "Completed"
     FAILED = "Failed"

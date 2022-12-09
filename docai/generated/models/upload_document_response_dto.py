@@ -9,8 +9,8 @@ T = TypeVar("T", bound="UploadDocumentResponseDto")
 class UploadDocumentResponseDto:
     """
     Attributes:
-        filename (str):
-        document_id (str):
+        filename (str): File name of the document.
+        document_id (str): ID of the document.
     """
 
     filename: str

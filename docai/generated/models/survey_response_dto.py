@@ -9,9 +9,9 @@ T = TypeVar("T", bound="SurveyResponseDto")
 class SurveyResponseDto:
     """
     Attributes:
-        user_role (str): The Users Role
-        document_types (List[str]): The types of documents the user would like to process
-        number_pages (str): The number of pages the user would like to process
+        user_role (str): The role of the user.
+        document_types (List[str]): The types of documents the user would like to process.
+        number_pages (str): The number of pages the user would like to process.
     """
 
     user_role: str

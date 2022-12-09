@@ -56,7 +56,7 @@ def sync_detailed(
     client: AuthenticatedClient,
     json_body: AddOrEditColumnDto,
 ) -> Response[ColumnIdResponseDto]:
-    """Adds a column to a table
+    """Adds a column to a table.
 
     Args:
         id (str):
@@ -89,7 +89,7 @@ def sync(
     client: AuthenticatedClient,
     json_body: AddOrEditColumnDto,
 ) -> Optional[ColumnIdResponseDto]:
-    """Adds a column to a table
+    """Adds a column to a table.
 
     Args:
         id (str):
@@ -115,7 +115,7 @@ async def asyncio_detailed(
     client: AuthenticatedClient,
     json_body: AddOrEditColumnDto,
 ) -> Response[ColumnIdResponseDto]:
-    """Adds a column to a table
+    """Adds a column to a table.
 
     Args:
         id (str):
@@ -146,7 +146,7 @@ async def asyncio(
     client: AuthenticatedClient,
     json_body: AddOrEditColumnDto,
 ) -> Optional[ColumnIdResponseDto]:
-    """Adds a column to a table
+    """Adds a column to a table.
 
     Args:
         id (str):

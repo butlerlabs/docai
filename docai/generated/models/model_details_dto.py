@@ -15,13 +15,13 @@ T = TypeVar("T", bound="ModelDetailsDto")
 class ModelDetailsDto:
     """
     Attributes:
-        id (str): The unique id of this model.
+        id (str): The unique ID of this model.
         name (str): Name of the model.
         status (ModelStatus):
         model_type (BaseModelType):
-        fields (List[ModelFieldDto]): The text, checkbox, and signature fields for this model
-        tables (List[ModelTableDto]): The table fields for this model
-        training_failure_reason (Union[Unset, str]): Reason for previous training failure
+        fields (List[ModelFieldDto]): The text, checkbox, and signature fields for this model.
+        tables (List[ModelTableDto]): The table fields for this model.
+        training_failure_reason (Union[Unset, str]): Reason for previous training failure.
     """
 
     id: str

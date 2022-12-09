@@ -12,8 +12,8 @@ class ModelFieldDto:
     """
     Attributes:
         type (ModelFieldType):
-        name (str): The name for the new field
-        id (str): The unique id of this field.
+        name (str): The name for the new field.
+        id (str): The unique ID of this field.
     """
 
     type: ModelFieldType

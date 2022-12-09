@@ -12,7 +12,7 @@ class QueueBodyDto:
     """
     Attributes:
         queue_name (str): Name of the queue to be created.
-        doc_type_id (str): Id of the document type that the queue will process.
+        doc_type_id (str): ID of the document type that the queue will process.
         settings (QueueSettingsCreateDto):
     """
 

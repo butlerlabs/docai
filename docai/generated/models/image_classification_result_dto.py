@@ -11,10 +11,10 @@ T = TypeVar("T", bound="ImageClassificationResultDto")
 class ImageClassificationResultDto:
     """
     Attributes:
-        request_id (str): The id of the image classification request
-        file_name (str): The file name of the uploaded image
-        uri (str): The uri of the uploaded image
-        label (str): The result of the image classification request
+        request_id (str): The ID of the image classification request.
+        file_name (str): The file name of the uploaded image.
+        uri (str): The uri of the uploaded image.
+        label (str): The result of the image classification request.
         status (MlInferenceStatusEnum):
     """
 

@@ -9,7 +9,7 @@ T = TypeVar("T", bound="DocumentTypeSettingsDto")
 class DocumentTypeSettingsDto:
     """
     Attributes:
-        butler_ops_enabled (bool): Whether or not butler ops is enabled for training this Document Type
+        butler_ops_enabled (bool): Whether Butler Ops is enabled for training this document type.
     """
 
     butler_ops_enabled: bool

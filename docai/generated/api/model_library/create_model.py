@@ -49,7 +49,7 @@ def sync_detailed(
     *,
     client: AuthenticatedClient,
 ) -> Response[CreateModelResponseDto]:
-    """Creates a new instance of the model_type model
+    """Creates a new instance of the model_type model.
 
     Args:
         model_type (BaseModelType):
@@ -76,7 +76,7 @@ def sync(
     *,
     client: AuthenticatedClient,
 ) -> Optional[CreateModelResponseDto]:
-    """Creates a new instance of the model_type model
+    """Creates a new instance of the model_type model.
 
     Args:
         model_type (BaseModelType):
@@ -96,7 +96,7 @@ async def asyncio_detailed(
     *,
     client: AuthenticatedClient,
 ) -> Response[CreateModelResponseDto]:
-    """Creates a new instance of the model_type model
+    """Creates a new instance of the model_type model.
 
     Args:
         model_type (BaseModelType):
@@ -121,7 +121,7 @@ async def asyncio(
     *,
     client: AuthenticatedClient,
 ) -> Optional[CreateModelResponseDto]:
-    """Creates a new instance of the model_type model
+    """Creates a new instance of the model_type model.
 
     Args:
         model_type (BaseModelType):

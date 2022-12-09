@@ -1,4 +1,4 @@
-from typing import Any, Dict, Optional, Union, cast
+from typing import Any, Dict, Optional
 
 import httpx
 
@@ -26,18 +26,15 @@ def _get_kwargs(
     }
 
 
-def _parse_response(*, response: httpx.Response) -> Optional[Union[Any, DocumentTypeDto]]:
+def _parse_response(*, response: httpx.Response) -> Optional[DocumentTypeDto]:
     if response.status_code == 200:
         response_200 = DocumentTypeDto.from_dict(response.json())
 
         return response_200
-    if response.status_code == 404:
-        response_404 = cast(Any, None)
-        return response_404
     return None
 
 
-def _build_response(*, response: httpx.Response) -> Response[Union[Any, DocumentTypeDto]]:
+def _build_response(*, response: httpx.Response) -> Response[DocumentTypeDto]:
     return Response(
         status_code=response.status_code,
         content=response.content,
@@ -50,14 +47,14 @@ def sync_detailed(
     doc_type_id: str,
     *,
     client: AuthenticatedClient,
-) -> Response[Union[Any, DocumentTypeDto]]:
-    """Get a document type by ID
+) -> Response[DocumentTypeDto]:
+    """Get a document type by ID.
 
     Args:
         doc_type_id (str):
 
     Returns:
-        Response[Union[Any, DocumentTypeDto]]
+        Response[DocumentTypeDto]
     """
 
     kwargs = _get_kwargs(
@@ -77,14 +74,14 @@ def sync(
     doc_type_id: str,
     *,
     client: AuthenticatedClient,
-) -> Optional[Union[Any, DocumentTypeDto]]:
-    """Get a document type by ID
+) -> Optional[DocumentTypeDto]:
+    """Get a document type by ID.
 
     Args:
         doc_type_id (str):
 
     Returns:
-        Response[Union[Any, DocumentTypeDto]]
+        Response[DocumentTypeDto]
     """
 
     return sync_detailed(
@@ -97,14 +94,14 @@ async def asyncio_detailed(
     doc_type_id: str,
     *,
     client: AuthenticatedClient,
-) -> Response[Union[Any, DocumentTypeDto]]:
-    """Get a document type by ID
+) -> Response[DocumentTypeDto]:
+    """Get a document type by ID.
 
     Args:
         doc_type_id (str):
 
     Returns:
-        Response[Union[Any, DocumentTypeDto]]
+        Response[DocumentTypeDto]
     """
 
     kwargs = _get_kwargs(
@@ -122,14 +119,14 @@ async def asyncio(
     doc_type_id: str,
     *,
     client: AuthenticatedClient,
-) -> Optional[Union[Any, DocumentTypeDto]]:
-    """Get a document type by ID
+) -> Optional[DocumentTypeDto]:
+    """Get a document type by ID.
 
     Args:
         doc_type_id (str):
 
     Returns:
-        Response[Union[Any, DocumentTypeDto]]
+        Response[DocumentTypeDto]
     """
 
     return (

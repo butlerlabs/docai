@@ -12,10 +12,10 @@ T = TypeVar("T", bound="TrainingDocumentSummaryDto")
 class TrainingDocumentSummaryDto:
     """
     Attributes:
-        document_id (str): The unique id of the document.
+        document_id (str): The unique ID of the document.
         status (ModelTrainingDocumentStatus):
-        size (float): The estimated size of the training document, includes the document and its OCR results
-        failure_reason (Union[Unset, str]): Reason for why the document failed
+        size (float): The estimated size of the training document, includes the document and its OCR results.
+        failure_reason (Union[Unset, str]): Reason for why the document failed.
     """
 
     document_id: str

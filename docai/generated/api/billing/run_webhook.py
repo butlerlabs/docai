@@ -1,10 +1,9 @@
-from typing import Any, Dict, Optional
+from typing import Any, Dict
 
 import httpx
 
 from ...client import AuthenticatedClient
 from ...models.billing_webhook_body_dto import BillingWebhookBodyDto
-from ...models.billing_webhook_request_dto import BillingWebhookRequestDto
 from ...types import Response
 
 
@@ -30,20 +29,12 @@ def _get_kwargs(
     }
 
 
-def _parse_response(*, response: httpx.Response) -> Optional[BillingWebhookRequestDto]:
-    if response.status_code == 204:
-        response_204 = BillingWebhookRequestDto.from_dict(response.json())
-
-        return response_204
-    return None
-
-
-def _build_response(*, response: httpx.Response) -> Response[BillingWebhookRequestDto]:
+def _build_response(*, response: httpx.Response) -> Response[Any]:
     return Response(
         status_code=response.status_code,
         content=response.content,
         headers=response.headers,
-        parsed=_parse_response(response=response),
+        parsed=None,
     )
 
 
@@ -51,13 +42,13 @@ def sync_detailed(
     *,
     client: AuthenticatedClient,
     json_body: BillingWebhookBodyDto,
-) -> Response[BillingWebhookRequestDto]:
+) -> Response[Any]:
     """
     Args:
         json_body (BillingWebhookBodyDto):
 
     Returns:
-        Response[BillingWebhookRequestDto]
+        Response[Any]
     """
 
     kwargs = _get_kwargs(
@@ -73,36 +64,17 @@ def sync_detailed(
     return _build_response(response=response)
 
 
-def sync(
-    *,
-    client: AuthenticatedClient,
-    json_body: BillingWebhookBodyDto,
-) -> Optional[BillingWebhookRequestDto]:
-    """
-    Args:
-        json_body (BillingWebhookBodyDto):
-
-    Returns:
-        Response[BillingWebhookRequestDto]
-    """
-
-    return sync_detailed(
-        client=client,
-        json_body=json_body,
-    ).parsed
-
-
 async def asyncio_detailed(
     *,
     client: AuthenticatedClient,
     json_body: BillingWebhookBodyDto,
-) -> Response[BillingWebhookRequestDto]:
+) -> Response[Any]:
     """
     Args:
         json_body (BillingWebhookBodyDto):
 
     Returns:
-        Response[BillingWebhookRequestDto]
+        Response[Any]
     """
 
     kwargs = _get_kwargs(
@@ -114,24 +86,3 @@ async def asyncio_detailed(
         response = await _client.request(**kwargs)
 
     return _build_response(response=response)
-
-
-async def asyncio(
-    *,
-    client: AuthenticatedClient,
-    json_body: BillingWebhookBodyDto,
-) -> Optional[BillingWebhookRequestDto]:
-    """
-    Args:
-        json_body (BillingWebhookBodyDto):
-
-    Returns:
-        Response[BillingWebhookRequestDto]
-    """
-
-    return (
-        await asyncio_detailed(
-            client=client,
-            json_body=json_body,
-        )
-    ).parsed

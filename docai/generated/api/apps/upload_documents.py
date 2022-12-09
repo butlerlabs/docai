@@ -75,7 +75,7 @@ def sync_detailed(
     extra_results: Union[Unset, None, List[UploadDocumentsExtraResultsItem]] = UNSET,
 ) -> Response[UploadDocumentsAppRunResponseDto]:
     """Upload documents (PDFs, and image formats) to your app to start an extraction job. Returns an
-    appRunId that can be used to check the status of the extraction job, and get its results
+    appRunId that can be used to check the status of the extraction job, and get its results.
 
     Args:
         app_id (str):
@@ -109,7 +109,7 @@ def sync(
     extra_results: Union[Unset, None, List[UploadDocumentsExtraResultsItem]] = UNSET,
 ) -> Optional[UploadDocumentsAppRunResponseDto]:
     """Upload documents (PDFs, and image formats) to your app to start an extraction job. Returns an
-    appRunId that can be used to check the status of the extraction job, and get its results
+    appRunId that can be used to check the status of the extraction job, and get its results.
 
     Args:
         app_id (str):
@@ -136,7 +136,7 @@ async def asyncio_detailed(
     extra_results: Union[Unset, None, List[UploadDocumentsExtraResultsItem]] = UNSET,
 ) -> Response[UploadDocumentsAppRunResponseDto]:
     """Upload documents (PDFs, and image formats) to your app to start an extraction job. Returns an
-    appRunId that can be used to check the status of the extraction job, and get its results
+    appRunId that can be used to check the status of the extraction job, and get its results.
 
     Args:
         app_id (str):
@@ -168,7 +168,7 @@ async def asyncio(
     extra_results: Union[Unset, None, List[UploadDocumentsExtraResultsItem]] = UNSET,
 ) -> Optional[UploadDocumentsAppRunResponseDto]:
     """Upload documents (PDFs, and image formats) to your app to start an extraction job. Returns an
-    appRunId that can be used to check the status of the extraction job, and get its results
+    appRunId that can be used to check the status of the extraction job, and get its results.
 
     Args:
         app_id (str):

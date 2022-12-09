@@ -39,7 +39,7 @@ def sync_detailed(
     *,
     client: AuthenticatedClient,
 ) -> Response[Any]:
-    """Begin training the Document Type specified by Id
+    """Begin training the document type specified by ID.
 
     Args:
         doc_type_id (str):
@@ -66,7 +66,7 @@ async def asyncio_detailed(
     *,
     client: AuthenticatedClient,
 ) -> Response[Any]:
-    """Begin training the Document Type specified by Id
+    """Begin training the document type specified by ID.
 
     Args:
         doc_type_id (str):

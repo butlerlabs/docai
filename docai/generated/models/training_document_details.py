@@ -11,9 +11,9 @@ T = TypeVar("T", bound="TrainingDocumentDetails")
 class TrainingDocumentDetails:
     """
     Attributes:
-        documents_required_for_training (float): Number of documents required to label before training is enabled
-        documents_reviewed (float): Number of documents the user has reviewed for training
-        total_training_documents (float): Total number of training documents that the user has uploaded
+        documents_required_for_training (float): Number of documents required to label before training is enabled.
+        documents_reviewed (float): Number of documents the user has reviewed for training.
+        total_training_documents (float): Total number of training documents that the user has uploaded.
         status (TrainingDocumentTypeStatus):
     """
 

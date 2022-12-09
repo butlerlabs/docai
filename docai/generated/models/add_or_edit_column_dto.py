@@ -9,7 +9,7 @@ T = TypeVar("T", bound="AddOrEditColumnDto")
 class AddOrEditColumnDto:
     """
     Attributes:
-        name (str): The name for the column
+        name (str): The name for the column.
     """
 
     name: str

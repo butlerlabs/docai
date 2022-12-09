@@ -15,7 +15,7 @@ T = TypeVar("T", bound="DocumentExtractionResultsDto")
 class DocumentExtractionResultsDto:
     """
     Attributes:
-        id (str): ID of the document
+        id (str): ID of the document.
         file_name (str):
         mime_type (str):
         document_type (str):

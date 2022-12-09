@@ -9,9 +9,9 @@ T = TypeVar("T", bound="ConfidenceDocCountDto")
 class ConfidenceDocCountDto:
     """
     Attributes:
-        high (float): Number of documents with high confidence
-        low (float): Number of documents with low confidence
-        user_reviewed (float): Number of documents with user reviewed confidence
+        high (float): Number of documents with high confidence.
+        low (float): Number of documents with low confidence.
+        user_reviewed (float): Number of documents with user reviewed confidence.
     """
 
     high: float

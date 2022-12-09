@@ -11,10 +11,10 @@ T = TypeVar("T", bound="PaginatedExtractionResultsDto")
 class PaginatedExtractionResultsDto:
     """
     Attributes:
-        has_next (bool): Whether there are more pages to fetch after this page
-        has_previous (bool): Whether there are more pages to fetch before this page
-        total_count (float): Total number of items across all pages
-        items (List[ExtractionResultsDto]): Page of extraction results
+        has_next (bool): Whether there are more pages to fetch after this page.
+        has_previous (bool): Whether there are more pages to fetch before this page.
+        total_count (float): Total number of items across all pages.
+        items (List[ExtractionResultsDto]): Page of extraction results.
     """
 
     has_next: bool

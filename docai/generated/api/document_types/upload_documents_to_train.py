@@ -32,10 +32,10 @@ def _get_kwargs(
 
 
 def _parse_response(*, response: httpx.Response) -> Optional[DocumentIdListDto]:
-    if response.status_code == 200:
-        response_200 = DocumentIdListDto.from_dict(response.json())
+    if response.status_code == 201:
+        response_201 = DocumentIdListDto.from_dict(response.json())
 
-        return response_200
+        return response_201
     return None
 
 
@@ -54,7 +54,7 @@ def sync_detailed(
     client: AuthenticatedClient,
     multipart_data: UploadDocumentsToTrainMultipartData,
 ) -> Response[DocumentIdListDto]:
-    """Upload documents to the document type for Training
+    """Upload documents to the document type for training.
 
     Args:
         doc_type_id (str):
@@ -84,7 +84,7 @@ def sync(
     client: AuthenticatedClient,
     multipart_data: UploadDocumentsToTrainMultipartData,
 ) -> Optional[DocumentIdListDto]:
-    """Upload documents to the document type for Training
+    """Upload documents to the document type for training.
 
     Args:
         doc_type_id (str):
@@ -107,7 +107,7 @@ async def asyncio_detailed(
     client: AuthenticatedClient,
     multipart_data: UploadDocumentsToTrainMultipartData,
 ) -> Response[DocumentIdListDto]:
-    """Upload documents to the document type for Training
+    """Upload documents to the document type for training.
 
     Args:
         doc_type_id (str):
@@ -135,7 +135,7 @@ async def asyncio(
     client: AuthenticatedClient,
     multipart_data: UploadDocumentsToTrainMultipartData,
 ) -> Optional[DocumentIdListDto]:
-    """Upload documents to the document type for Training
+    """Upload documents to the document type for training.
 
     Args:
         doc_type_id (str):

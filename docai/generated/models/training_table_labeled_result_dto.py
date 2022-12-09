@@ -13,7 +13,7 @@ T = TypeVar("T", bound="TrainingTableLabeledResultDto")
 class TrainingTableLabeledResultDto:
     """
     Attributes:
-        id (str): The unique id of this table.
+        id (str): The unique ID of this table.
         name (str): The name of the table.
         type (ModelFieldType):
         columns (List[TrainingColumnDto]): The columns for this table.

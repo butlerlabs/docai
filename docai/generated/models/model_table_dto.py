@@ -13,9 +13,9 @@ class ModelTableDto:
     """
     Attributes:
         type (ModelFieldType):
-        name (str): The name for the new field
-        id (str): The unique id of this table.
-        columns (List[ModelColumnDto]): The columns fields for this table
+        name (str): The name for the new field.
+        id (str): The unique ID of this table.
+        columns (List[ModelColumnDto]): The columns fields for this table.
     """
 
     type: ModelFieldType

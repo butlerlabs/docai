@@ -11,8 +11,8 @@ T = TypeVar("T", bound="ExtractedTableRowWithBlocksDto")
 class ExtractedTableRowWithBlocksDto:
     """
     Attributes:
-        id (str): Id of the extracted row
-        cells (List[ExtractedFieldResultsDto]): An extracted table row with associated blocks
+        id (str): ID of the extracted row.
+        cells (List[ExtractedFieldResultsDto]): An extracted table row with associated blocks.
     """
 
     id: str

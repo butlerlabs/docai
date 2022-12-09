@@ -13,11 +13,11 @@ T = TypeVar("T", bound="DocumentTypeInfoDto")
 class DocumentTypeInfoDto:
     """
     Attributes:
-        id (str): ID of this doctype
-        name (str): Name of this doctype
+        id (str): ID of this document type.
+        name (str): Name of this document type.
         status (ModelStatus):
         model_type (BaseModelType):
-        is_train_enabled (bool): If training is enabled for this specific Document Type
+        is_train_enabled (bool): If training is enabled for this specific document type.
         training_document_details (Optional[TrainingDocumentDetails]):
     """
 

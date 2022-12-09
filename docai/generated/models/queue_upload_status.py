@@ -2,10 +2,7 @@ from enum import Enum
 
 
 class QueueUploadStatus(str, Enum):
-    UPLOADINGFILES = "UploadingFiles"
-    DETECTINGTEXT = "DetectingText"
-    EXTRACTINGDATA = "ExtractingData"
-    WAITINGFORBUTLEROPSREVIEW = "WaitingForButlerOpsReview"
+    INPROGRESS = "InProgress"
     WAITINGFORUSERREVIEW = "WaitingForUserReview"
     GENERATINGRESULTS = "GeneratingResults"
     COMPLETED = "Completed"

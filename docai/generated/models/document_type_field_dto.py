@@ -9,8 +9,8 @@ T = TypeVar("T", bound="DocumentTypeFieldDto")
 class DocumentTypeFieldDto:
     """
     Attributes:
-        id (str): Form field or column ID
-        name (str): Form field or column display name
+        id (str): Form field or column ID.
+        name (str): Form field or column display name.
     """
 
     id: str

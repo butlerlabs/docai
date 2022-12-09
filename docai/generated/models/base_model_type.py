@@ -22,6 +22,7 @@ class BaseModelType(str, Enum):
     LEGACYCUSTOM = "LegacyCustom"
     CUSTOMFORM = "CustomForm"
     COMPOSED = "Composed"
+    NEURAL = "Neural"
 
     def __str__(self) -> str:
         return str(self.value)

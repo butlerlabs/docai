@@ -11,11 +11,11 @@ T = TypeVar("T", bound="ChargebeeLinkedCustomerDto")
 class ChargebeeLinkedCustomerDto:
     """
     Attributes:
-        customer_id (str): Identifier of the customer
-        has_billing_address (bool): The customer has billing address
-        has_payment_method (bool): The customer has payment method
-        has_active_subscription (bool): The customer has at least one active subscription
-        email (Union[Unset, str]): Email of the customer. Configured email notifications will be sent to this email
+        customer_id (str): Identifier of the customer.
+        has_billing_address (bool): The customer has billing address.
+        has_payment_method (bool): The customer has payment method.
+        has_active_subscription (bool): The customer has at least one active subscription.
+        email (Union[Unset, str]): Email of the customer. Configured email notifications will be sent to this email.
     """
 
     customer_id: str

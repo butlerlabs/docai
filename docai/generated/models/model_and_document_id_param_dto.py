@@ -9,8 +9,8 @@ T = TypeVar("T", bound="ModelAndDocumentIdParamDto")
 class ModelAndDocumentIdParamDto:
     """
     Attributes:
-        id (str): The id of the model.
-        document_id (str): The id of the document.
+        id (str): The ID of the model.
+        document_id (str): The ID of the document.
     """
 
     id: str

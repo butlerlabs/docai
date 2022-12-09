@@ -50,7 +50,7 @@ def sync_detailed(
     *,
     client: AuthenticatedClient,
 ) -> Response[TrainingDocumentResultDto]:
-    """Get the details of a specific training document
+    """Get the details of a specific training document.
 
     Args:
         id (str):
@@ -80,7 +80,7 @@ def sync(
     *,
     client: AuthenticatedClient,
 ) -> Optional[TrainingDocumentResultDto]:
-    """Get the details of a specific training document
+    """Get the details of a specific training document.
 
     Args:
         id (str):
@@ -103,7 +103,7 @@ async def asyncio_detailed(
     *,
     client: AuthenticatedClient,
 ) -> Response[TrainingDocumentResultDto]:
-    """Get the details of a specific training document
+    """Get the details of a specific training document.
 
     Args:
         id (str):
@@ -131,7 +131,7 @@ async def asyncio(
     *,
     client: AuthenticatedClient,
 ) -> Optional[TrainingDocumentResultDto]:
-    """Get the details of a specific training document
+    """Get the details of a specific training document.
 
     Args:
         id (str):

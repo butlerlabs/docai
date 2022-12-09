@@ -9,7 +9,7 @@ T = TypeVar("T", bound="EditModelNameDto")
 class EditModelNameDto:
     """
     Attributes:
-        name (str): The new name for the model
+        name (str): The new name for the model.
     """
 
     name: str

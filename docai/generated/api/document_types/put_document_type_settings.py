@@ -31,10 +31,10 @@ def _get_kwargs(
 
 
 def _parse_response(*, response: httpx.Response) -> Optional[DocumentTypeSettingsDto]:
-    if response.status_code == 201:
-        response_201 = DocumentTypeSettingsDto.from_dict(response.json())
+    if response.status_code == 204:
+        response_204 = DocumentTypeSettingsDto.from_dict(response.json())
 
-        return response_201
+        return response_204
     return None
 
 
@@ -53,7 +53,7 @@ def sync_detailed(
     client: AuthenticatedClient,
     json_body: DocumentTypeSettingsDto,
 ) -> Response[DocumentTypeSettingsDto]:
-    """Put a document type's settings, by ID
+    """Put a document type's settings, by ID.
 
     Args:
         doc_type_id (str):
@@ -83,7 +83,7 @@ def sync(
     client: AuthenticatedClient,
     json_body: DocumentTypeSettingsDto,
 ) -> Optional[DocumentTypeSettingsDto]:
-    """Put a document type's settings, by ID
+    """Put a document type's settings, by ID.
 
     Args:
         doc_type_id (str):
@@ -106,7 +106,7 @@ async def asyncio_detailed(
     client: AuthenticatedClient,
     json_body: DocumentTypeSettingsDto,
 ) -> Response[DocumentTypeSettingsDto]:
-    """Put a document type's settings, by ID
+    """Put a document type's settings, by ID.
 
     Args:
         doc_type_id (str):
@@ -134,7 +134,7 @@ async def asyncio(
     client: AuthenticatedClient,
     json_body: DocumentTypeSettingsDto,
 ) -> Optional[DocumentTypeSettingsDto]:
-    """Put a document type's settings, by ID
+    """Put a document type's settings, by ID.
 
     Args:
         doc_type_id (str):

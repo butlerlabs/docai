@@ -9,7 +9,7 @@ T = TypeVar("T", bound="CreateModelResponseDto")
 class CreateModelResponseDto:
     """
     Attributes:
-        model_id (str): the id of the generated model
+        model_id (str): The ID of the generated model.
     """
 
     model_id: str

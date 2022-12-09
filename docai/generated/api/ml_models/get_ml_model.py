@@ -48,7 +48,7 @@ def sync_detailed(
     *,
     client: AuthenticatedClient,
 ) -> Response[MlModelDto]:
-    """Get details of a ml model
+    """Get details of a ml model.
 
     Args:
         model_id (str):
@@ -75,7 +75,7 @@ def sync(
     *,
     client: AuthenticatedClient,
 ) -> Optional[MlModelDto]:
-    """Get details of a ml model
+    """Get details of a ml model.
 
     Args:
         model_id (str):
@@ -95,7 +95,7 @@ async def asyncio_detailed(
     *,
     client: AuthenticatedClient,
 ) -> Response[MlModelDto]:
-    """Get details of a ml model
+    """Get details of a ml model.
 
     Args:
         model_id (str):
@@ -120,7 +120,7 @@ async def asyncio(
     *,
     client: AuthenticatedClient,
 ) -> Optional[MlModelDto]:
-    """Get details of a ml model
+    """Get details of a ml model.
 
     Args:
         model_id (str):

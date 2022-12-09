@@ -102,7 +102,7 @@ def sync_detailed(
     extra_results: Union[Unset, None, List[GetExtractionResultsExtraResultsItem]] = UNSET,
     sort_by: Union[Unset, None, ExtractionResultsSortBy] = UNSET,
 ) -> Response[PaginatedExtractionResultsDto]:
-    """Get paginated list of extraction results for documents matching the query params
+    """Get paginated list of extraction results for documents matching the query params.
 
     Args:
         queue_id (str):
@@ -150,7 +150,7 @@ def sync(
     extra_results: Union[Unset, None, List[GetExtractionResultsExtraResultsItem]] = UNSET,
     sort_by: Union[Unset, None, ExtractionResultsSortBy] = UNSET,
 ) -> Optional[PaginatedExtractionResultsDto]:
-    """Get paginated list of extraction results for documents matching the query params
+    """Get paginated list of extraction results for documents matching the query params.
 
     Args:
         queue_id (str):
@@ -191,7 +191,7 @@ async def asyncio_detailed(
     extra_results: Union[Unset, None, List[GetExtractionResultsExtraResultsItem]] = UNSET,
     sort_by: Union[Unset, None, ExtractionResultsSortBy] = UNSET,
 ) -> Response[PaginatedExtractionResultsDto]:
-    """Get paginated list of extraction results for documents matching the query params
+    """Get paginated list of extraction results for documents matching the query params.
 
     Args:
         queue_id (str):
@@ -237,7 +237,7 @@ async def asyncio(
     extra_results: Union[Unset, None, List[GetExtractionResultsExtraResultsItem]] = UNSET,
     sort_by: Union[Unset, None, ExtractionResultsSortBy] = UNSET,
 ) -> Optional[PaginatedExtractionResultsDto]:
-    """Get paginated list of extraction results for documents matching the query params
+    """Get paginated list of extraction results for documents matching the query params.
 
     Args:
         queue_id (str):

@@ -9,8 +9,8 @@ T = TypeVar("T", bound="ColumnIdResponseDto")
 class ColumnIdResponseDto:
     """
     Attributes:
-        field_id (str): The id of the field.
-        column_id (str): The id of the column.
+        field_id (str): The ID of the field.
+        column_id (str): The ID of the column.
     """
 
     field_id: str
