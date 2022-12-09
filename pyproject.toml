@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "docai-py"
 license = "Apache-2.0"
-version = "0.1.0"
+version = "0.1.1"
 description = "Butler Doc AI"
 authors = [
     "Butler Labs <support@butlerlabs.ai>",
