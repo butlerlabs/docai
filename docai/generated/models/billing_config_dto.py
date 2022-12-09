@@ -9,9 +9,9 @@ T = TypeVar("T", bound="BillingConfigDto")
 class BillingConfigDto:
     """
     Attributes:
-        site (str): Name of the Chargebee site billing system connects to
+        site (str): Name of the Chargebee site billing system connects to.
         api_key (str): API key that is safe to be used from the UI for the purposes of enabling users to purchase a plan
-            and manage their subscriptions
+            and manage their subscriptions.
     """
 
     site: str

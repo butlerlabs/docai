@@ -13,19 +13,20 @@ T = TypeVar("T", bound="BillingWebhookBodyDto")
 class BillingWebhookBodyDto:
     """
     Attributes:
-        id (str): Uniquely identifies a event
-        occurred_at (float): Timestamp indicating when this event had occurred. UTC in seconds
-        source (str): Source of the event
+        id (str): Uniquely identifies a event.
+        occurred_at (float): Timestamp indicating when this event had occurred. UTC in seconds.
+        source (str): Source of the event.
         webhook_status (str): The webhooks object is unavailable on the first webhook call for the event. For subsequent
-            calls, this attribute holds the status from after the last retry
-        content (BillingWebhookBodyDtoContent): The JSON data associated with this event
-        user (Union[Unset, str]): The “user” that triggered the event. The value depends on the source attribute
-        webhook_failure_reason (Union[Unset, str]): The reason why the webhook failed
+            calls, this attribute holds the status from after the last retry.
+        content (BillingWebhookBodyDtoContent): The JSON data associated with this event.
+        user (Union[Unset, str]): The user that triggered the event. The value depends on the source attribute.
+        webhook_failure_reason (Union[Unset, str]): The reason why the webhook failed.
         webhooks (Union[Unset, List[BillingWebhookDto]]): Array of webhook call statuses: one for each of the webhooks
-            configured for the site
-        event_type (Union[Unset, str]): The types of event provided by chargebee
+            configured for the site.
+        event_type (Union[Unset, str]): The types of event provided by chargebee.
         api_version (Union[Unset, str]): The Chargebee API Version used for rendering this event content. While
-            processing webhooks, ensure this version is same as the API version used by your webhook server's client library
+            processing webhooks, ensure this version is same as the API version used by your webhook server's client
+            library.
     """
 
     id: str

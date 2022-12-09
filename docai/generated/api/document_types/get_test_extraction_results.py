@@ -52,7 +52,7 @@ def sync_detailed(
     *,
     client: AuthenticatedClient,
 ) -> Response[ExtractionResultsWithBlocksDto]:
-    """Get the extraction results for a Test Document
+    """Get the extraction results for a test document.
 
     Args:
         doc_type_id (str):
@@ -82,7 +82,7 @@ def sync(
     *,
     client: AuthenticatedClient,
 ) -> Optional[ExtractionResultsWithBlocksDto]:
-    """Get the extraction results for a Test Document
+    """Get the extraction results for a test document.
 
     Args:
         doc_type_id (str):
@@ -105,7 +105,7 @@ async def asyncio_detailed(
     *,
     client: AuthenticatedClient,
 ) -> Response[ExtractionResultsWithBlocksDto]:
-    """Get the extraction results for a Test Document
+    """Get the extraction results for a test document.
 
     Args:
         doc_type_id (str):
@@ -133,7 +133,7 @@ async def asyncio(
     *,
     client: AuthenticatedClient,
 ) -> Optional[ExtractionResultsWithBlocksDto]:
-    """Get the extraction results for a Test Document
+    """Get the extraction results for a test document.
 
     Args:
         doc_type_id (str):

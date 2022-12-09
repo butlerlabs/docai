@@ -9,7 +9,7 @@ T = TypeVar("T", bound="CreateSubscriptionLinkDto")
 class CreateSubscriptionLinkDto:
     """
     Attributes:
-        plan_id (str): ID of the plan to use while creating a subscription
+        plan_id (str): ID of the plan to use while creating a subscription.
     """
 
     plan_id: str

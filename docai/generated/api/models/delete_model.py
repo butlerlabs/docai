@@ -50,7 +50,7 @@ def sync_detailed(
     client: AuthenticatedClient,
     model_type: ModelSummaryTaskType,
 ) -> Response[Any]:
-    """Delete a ml model
+    """Delete a ml model.
 
     Args:
         model_id (str):
@@ -80,7 +80,7 @@ async def asyncio_detailed(
     client: AuthenticatedClient,
     model_type: ModelSummaryTaskType,
 ) -> Response[Any]:
-    """Delete a ml model
+    """Delete a ml model.
 
     Args:
         model_id (str):

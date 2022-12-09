@@ -11,7 +11,7 @@ T = TypeVar("T", bound="TestDocumentStatusDto")
 class TestDocumentStatusDto:
     """
     Attributes:
-        id (str): The Id of the Test Documenft
+        id (str): The ID of the test document.
         status (TestDocumentStatus):
     """
 

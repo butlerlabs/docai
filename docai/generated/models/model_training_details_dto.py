@@ -12,13 +12,13 @@ T = TypeVar("T", bound="ModelTrainingDetailsDto")
 class ModelTrainingDetailsDto:
     """
     Attributes:
-        has_next (bool): Whether there are more pages to fetch after this page
-        has_previous (bool): Whether there are more pages to fetch before this page
-        total_count (float): Total number of items across all pages
-        items (List[TrainingDocumentSummaryDto]): Array of training documents for this model
+        has_next (bool): Whether there are more pages to fetch after this page.
+        has_previous (bool): Whether there are more pages to fetch before this page.
+        total_count (float): Total number of items across all pages.
+        items (List[TrainingDocumentSummaryDto]): Array of training documents for this model.
         training_status (ModelDetailsTrainingStatusDto):
-        total_size (float): The estimated total size of the training dataset
-        size_limit (float): The maximum allowed size of the training dataset
+        total_size (float): The estimated total size of the training dataset.
+        size_limit (float): The maximum allowed size of the training dataset.
     """
 
     has_next: bool

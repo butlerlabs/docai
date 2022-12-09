@@ -9,8 +9,8 @@ T = TypeVar("T", bound="CategoryFieldOptionDto")
 class CategoryFieldOptionDto:
     """
     Attributes:
-        display_value (str): The display value for this category field
-        value (str): The selected value for this category field
+        display_value (str): The display value for this category field.
+        value (str): The selected value for this category field.
     """
 
     display_value: str

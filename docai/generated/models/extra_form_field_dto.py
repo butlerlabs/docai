@@ -12,8 +12,8 @@ T = TypeVar("T", bound="ExtraFormFieldDto")
 class ExtraFormFieldDto:
     """
     Attributes:
-        key (Optional[ExtraFormFieldDtoKey]): This form-field's key. `null` if not found
-        value (Optional[ExtraFormFieldDtoValue]): This form-field's value. `null` if not found
+        key (Optional[ExtraFormFieldDtoKey]): This form-field's key, null if not found.
+        value (Optional[ExtraFormFieldDtoValue]): This form-field's value, null if not found.
     """
 
     key: Optional[ExtraFormFieldDtoKey]

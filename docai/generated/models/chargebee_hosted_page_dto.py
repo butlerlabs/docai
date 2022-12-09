@@ -13,22 +13,22 @@ class ChargebeeHostedPageDto:
     """
     Attributes:
         embed (bool): If true then hosted page formatted to be shown in iframe. If false, it is formatted to be shown as
-            a separate page
-        id (Union[Unset, str]): ID of the plan to use while creating a subscription
-        type (Union[Unset, str]): Type of the requested hosted page
-        url (Union[Unset, str]): Unique URL for the hosted page that will be included in your website
-        state (Union[Unset, str]): Indicating the current state of the hosted page resource
-        failure_reason (Union[Unset, str]): Reason hosted page could not be created
+            a separate page.
+        id (Union[Unset, str]): ID of the plan to use while creating a subscription.
+        type (Union[Unset, str]): Type of the requested hosted page.
+        url (Union[Unset, str]): Unique URL for the hosted page that will be included in your website.
+        state (Union[Unset, str]): Indicating the current state of the hosted page resource.
+        failure_reason (Union[Unset, str]): Reason hosted page could not be created.
         pass_thru_content (Union[Unset, str]): You can pass through any content specific to the hosted page request and
-            get it back after user had submitted the hosted page
-        created_at (Union[Unset, float]): Indicates when this hosted page url is generated. UTC in seconds
+            get it back after user had submitted the hosted page.
+        created_at (Union[Unset, float]): Indicates when this hosted page url is generated. UTC in seconds.
         expires_at (Union[Unset, float]): Indicates when this hosted page url will expire. After this, the hosted page
-            cannot be accessed. UTC in seconds
-        updated_at (Union[Unset, float]): Timestamp indicating when this hosted page was last updated. UTC in seconds
+            cannot be accessed. UTC in seconds.
+        updated_at (Union[Unset, float]): Timestamp indicating when this hosted page was last updated. UTC in seconds.
         resource_version (Union[Unset, float]): Version number of this resource. Each update of this resource results in
-            incremental change of this number
+            incremental change of this number.
         checkout_info (Union[Unset, ChargebeeHostedPageDtoCheckoutInfo]): Customer Info (email, first name and last
-            name) given in the checkout page used for tracking abandoned carts
+            name) given in the checkout page used for tracking abandoned carts.
     """
 
     embed: bool

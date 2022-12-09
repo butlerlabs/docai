@@ -11,7 +11,7 @@ T = TypeVar("T", bound="AllFeaturesDto")
 class AllFeaturesDto:
     """
     Attributes:
-        features (List[FeatureDto]): All features
+        features (List[FeatureDto]): All features.
     """
 
     features: List[FeatureDto]

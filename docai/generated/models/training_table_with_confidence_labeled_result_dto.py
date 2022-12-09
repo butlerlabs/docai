@@ -14,7 +14,7 @@ T = TypeVar("T", bound="TrainingTableWithConfidenceLabeledResultDto")
 class TrainingTableWithConfidenceLabeledResultDto:
     """
     Attributes:
-        id (str): The unique id of this table.
+        id (str): The unique ID of this table.
         name (str): The name of the table.
         type (ModelFieldType):
         confidence_score (DocExConfidence):

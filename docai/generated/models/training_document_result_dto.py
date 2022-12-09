@@ -12,30 +12,30 @@ T = TypeVar("T", bound="TrainingDocumentResultDto")
 class TrainingDocumentResultDto:
     """
     Attributes:
-        model_id (str): The id of the model.
-        document_id (str): The id of the document.
+        document_id (str): The ID of the document.
         file_name (str): The file name of this document.
+        mime_type (str): The mime type of document.
+        model_id (str): The ID of the model.
         temp_doc_url (str): The temporary url for this specific document.
-        mime_type (str): The type of document that the results were extracted from.
         word_blocks (List[BlockDto]): The word blocks for this specific document.
         annotations (TrainingAnnotationDto):
     """
 
-    model_id: str
     document_id: str
     file_name: str
-    temp_doc_url: str
     mime_type: str
+    model_id: str
+    temp_doc_url: str
     word_blocks: List[BlockDto]
     annotations: TrainingAnnotationDto
     additional_properties: Dict[str, Any] = attr.ib(init=False, factory=dict)
 
     def to_dict(self) -> Dict[str, Any]:
-        model_id = self.model_id
         document_id = self.document_id
         file_name = self.file_name
-        temp_doc_url = self.temp_doc_url
         mime_type = self.mime_type
+        model_id = self.model_id
+        temp_doc_url = self.temp_doc_url
         word_blocks = []
         for word_blocks_item_data in self.word_blocks:
             word_blocks_item = word_blocks_item_data.to_dict()
@@ -48,11 +48,11 @@ class TrainingDocumentResultDto:
         field_dict.update(self.additional_properties)
         field_dict.update(
             {
-                "modelId": model_id,
                 "documentId": document_id,
                 "fileName": file_name,
-                "tempDocUrl": temp_doc_url,
                 "mimeType": mime_type,
+                "modelId": model_id,
+                "tempDocUrl": temp_doc_url,
                 "wordBlocks": word_blocks,
                 "annotations": annotations,
             }
@@ -63,15 +63,15 @@ class TrainingDocumentResultDto:
     @classmethod
     def from_dict(cls: Type[T], src_dict: Dict[str, Any]) -> T:
         d = src_dict.copy()
-        model_id = d.pop("modelId")
-
         document_id = d.pop("documentId")
 
         file_name = d.pop("fileName")
 
-        temp_doc_url = d.pop("tempDocUrl")
-
         mime_type = d.pop("mimeType")
+
+        model_id = d.pop("modelId")
+
+        temp_doc_url = d.pop("tempDocUrl")
 
         word_blocks = []
         _word_blocks = d.pop("wordBlocks")
@@ -83,11 +83,11 @@ class TrainingDocumentResultDto:
         annotations = TrainingAnnotationDto.from_dict(d.pop("annotations"))
 
         training_document_result_dto = cls(
-            model_id=model_id,
             document_id=document_id,
             file_name=file_name,
-            temp_doc_url=temp_doc_url,
             mime_type=mime_type,
+            model_id=model_id,
+            temp_doc_url=temp_doc_url,
             word_blocks=word_blocks,
             annotations=annotations,
         )

@@ -31,10 +31,10 @@ def _get_kwargs(
 
 
 def _parse_response(*, response: httpx.Response) -> Optional[ModelInfoDto]:
-    if response.status_code == 200:
-        response_200 = ModelInfoDto.from_dict(response.json())
+    if response.status_code == 201:
+        response_201 = ModelInfoDto.from_dict(response.json())
 
-        return response_200
+        return response_201
     return None
 
 
@@ -52,7 +52,7 @@ def sync_detailed(
     client: AuthenticatedClient,
     json_body: CreateModelDto,
 ) -> Response[ModelInfoDto]:
-    """Create a new custom model
+    """Create a new custom model.
 
     Args:
         json_body (CreateModelDto):
@@ -79,7 +79,7 @@ def sync(
     client: AuthenticatedClient,
     json_body: CreateModelDto,
 ) -> Optional[ModelInfoDto]:
-    """Create a new custom model
+    """Create a new custom model.
 
     Args:
         json_body (CreateModelDto):
@@ -99,7 +99,7 @@ async def asyncio_detailed(
     client: AuthenticatedClient,
     json_body: CreateModelDto,
 ) -> Response[ModelInfoDto]:
-    """Create a new custom model
+    """Create a new custom model.
 
     Args:
         json_body (CreateModelDto):
@@ -124,7 +124,7 @@ async def asyncio(
     client: AuthenticatedClient,
     json_body: CreateModelDto,
 ) -> Optional[ModelInfoDto]:
-    """Create a new custom model
+    """Create a new custom model.
 
     Args:
         json_body (CreateModelDto):

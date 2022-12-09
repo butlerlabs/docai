@@ -11,10 +11,10 @@ T = TypeVar("T", bound="PaginatedTestDocumentDetailDto")
 class PaginatedTestDocumentDetailDto:
     """
     Attributes:
-        has_next (bool): Whether there are more pages to fetch after this page
-        has_previous (bool): Whether there are more pages to fetch before this page
-        total_count (float): Total number of items across all pages
-        items (List[TestDocumentDetailDto]): Page of Test Document Details
+        has_next (bool): Whether there are more pages to fetch after this page.
+        has_previous (bool): Whether there are more pages to fetch before this page.
+        total_count (float): Total number of items across all pages.
+        items (List[TestDocumentDetailDto]): Page of test document details.
     """
 
     has_next: bool

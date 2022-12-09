@@ -9,8 +9,8 @@ T = TypeVar("T", bound="UploadGeneratedResultsSignedUrlDto")
 class UploadGeneratedResultsSignedUrlDto:
     """
     Attributes:
-        url (str): Signed url to download the file
-        mime_type (str): Mime type of the file
+        url (str): Signed url to download the file.
+        mime_type (str): Mime type of the file.
     """
 
     url: str

@@ -58,7 +58,7 @@ def sync_detailed(
     client: AuthenticatedClient,
     document_ids: List[str],
 ) -> Response[TrainingDocumentStatusListDto]:
-    """Get a list of Training Document Statuses, queried by Id
+    """Get a list of training document statuses, queried by ID.
 
     Args:
         doc_type_id (str):
@@ -88,7 +88,7 @@ def sync(
     client: AuthenticatedClient,
     document_ids: List[str],
 ) -> Optional[TrainingDocumentStatusListDto]:
-    """Get a list of Training Document Statuses, queried by Id
+    """Get a list of training document statuses, queried by ID.
 
     Args:
         doc_type_id (str):
@@ -111,7 +111,7 @@ async def asyncio_detailed(
     client: AuthenticatedClient,
     document_ids: List[str],
 ) -> Response[TrainingDocumentStatusListDto]:
-    """Get a list of Training Document Statuses, queried by Id
+    """Get a list of training document statuses, queried by ID.
 
     Args:
         doc_type_id (str):
@@ -139,7 +139,7 @@ async def asyncio(
     client: AuthenticatedClient,
     document_ids: List[str],
 ) -> Optional[TrainingDocumentStatusListDto]:
-    """Get a list of Training Document Statuses, queried by Id
+    """Get a list of training document statuses, queried by ID.
 
     Args:
         doc_type_id (str):

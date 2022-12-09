@@ -9,7 +9,7 @@ T = TypeVar("T", bound="DeleteQueueResponseDto")
 class DeleteQueueResponseDto:
     """
     Attributes:
-        queue_id (str): Id of the deleted queue.
+        queue_id (str): ID of the deleted queue.
     """
 
     queue_id: str

@@ -12,22 +12,22 @@ T = TypeVar("T", bound="ChargebeePortalSessionDto")
 class ChargebeePortalSessionDto:
     """
     Attributes:
-        id (str): Unique identifier for the portal session
-        token (str): Unique pre-authenticated portal session token to access customer portal directly
-        access_url (str): Unique URL for accessing the customer portal. Once accessed, this cannot be reused
-        status (str): Indicates the current status of the portal session
-        created_at (float): Timestamp indicating when this portal session was generated
-        customer_id (str): Identifier of the customer
-        redirect_url (Union[Unset, str]): URL to redirect when the user logs out from the portal
+        id (str): Unique identifier for the portal session.
+        token (str): Unique pre-authenticated portal session token to access customer portal directly.
+        access_url (str): Unique URL for accessing the customer portal. Once accessed, this cannot be reused.
+        status (str): Indicates the current status of the portal session.
+        created_at (float): Timestamp indicating when this portal session was generated.
+        customer_id (str): Identifier of the customer.
+        redirect_url (Union[Unset, str]): URL to redirect when the user logs out from the portal.
         expires_at (Union[Unset, float]): Timestamp indicating when the access URL will expire. Once expired, the URL
-            cannot be used to login into the portal
-        login_at (Union[Unset, float]): Timestamp indicating when this portal session URL was accessed by the user
+            cannot be used to login into the portal.
+        login_at (Union[Unset, float]): Timestamp indicating when this portal session URL was accessed by the user.
         logout_at (Union[Unset, float]): Timestamp indicating when this portal session was logged out either by user or
-            via API
-        login_ipaddress (Union[Unset, str]): IP Address from which the portal session URL was accessed
+            via API.
+        login_ipaddress (Union[Unset, str]): IP Address from which the portal session URL was accessed.
         logout_ipaddress (Union[Unset, str]): IP Address from which the portal session was logged out either by user or
-            via API
-        linked_customers (Union[Unset, List[ChargebeeLinkedCustomerDto]]): Identifier of the customer
+            via API.
+        linked_customers (Union[Unset, List[ChargebeeLinkedCustomerDto]]): Identifier of the customer.
     """
 
     id: str

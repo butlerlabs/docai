@@ -11,7 +11,7 @@ T = TypeVar("T", bound="MultipleFileUrlUploadDto")
 class MultipleFileUrlUploadDto:
     """
     Attributes:
-        files (List[UrlUploadDto]): List of files to upload
+        files (List[UrlUploadDto]): List of files to upload.
     """
 
     files: List[UrlUploadDto]

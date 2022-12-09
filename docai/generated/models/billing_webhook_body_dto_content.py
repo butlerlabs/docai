@@ -7,7 +7,7 @@ T = TypeVar("T", bound="BillingWebhookBodyDtoContent")
 
 @attr.s(auto_attribs=True)
 class BillingWebhookBodyDtoContent:
-    """The JSON data associated with this event"""
+    """The JSON data associated with this event."""
 
     additional_properties: Dict[str, Any] = attr.ib(init=False, factory=dict)
 

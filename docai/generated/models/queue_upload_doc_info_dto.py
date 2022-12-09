@@ -13,7 +13,7 @@ class QueueUploadDocInfoDto:
     """
     Attributes:
         confidence_doc_count (ConfidenceDocCountDto):
-        next_doc_to_review (Union[Unset, str]): ID of next document that needs user review, if one exists
+        next_doc_to_review (Union[Unset, str]): ID of next document that needs user review, if one exists.
     """
 
     confidence_doc_count: ConfidenceDocCountDto

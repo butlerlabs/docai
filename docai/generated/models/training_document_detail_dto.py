@@ -2,7 +2,7 @@ from typing import Any, Dict, List, Type, TypeVar
 
 import attr
 
-from ..models.training_document_status import TrainingDocumentStatus
+from ..models.document_status import DocumentStatus
 
 T = TypeVar("T", bound="TrainingDocumentDetailDto")
 
@@ -11,16 +11,16 @@ T = TypeVar("T", bound="TrainingDocumentDetailDto")
 class TrainingDocumentDetailDto:
     """
     Attributes:
-        id (str): The id of the Training Document
-        file_name (str): The file name of the Training Document
-        upload_time (float): The unix timestamp for when the Training Document was uploaded
-        status (TrainingDocumentStatus):
+        id (str): The ID of the training document.
+        file_name (str): The file name of the training document.
+        upload_time (float): The unix timestamp for when the training document was uploaded.
+        status (DocumentStatus):
     """
 
     id: str
     file_name: str
     upload_time: float
-    status: TrainingDocumentStatus
+    status: DocumentStatus
     additional_properties: Dict[str, Any] = attr.ib(init=False, factory=dict)
 
     def to_dict(self) -> Dict[str, Any]:
@@ -51,7 +51,7 @@ class TrainingDocumentDetailDto:
 
         upload_time = d.pop("uploadTime")
 
-        status = TrainingDocumentStatus(d.pop("status"))
+        status = DocumentStatus(d.pop("status"))
 
         training_document_detail_dto = cls(
             id=id,

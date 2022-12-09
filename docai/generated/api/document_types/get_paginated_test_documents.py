@@ -91,7 +91,7 @@ def sync_detailed(
     sort_by: Union[Unset, None, TestDocumentSortBy] = UNSET,
     status: Union[Unset, None, TestDocumentStatusFilter] = UNSET,
 ) -> Response[PaginatedTestDocumentDetailDto]:
-    """Get a paginated listing of Test documents for a document type by ID
+    """Get a paginated listing of test documents for a document type by ID.
 
     Args:
         doc_type_id (str):
@@ -136,7 +136,7 @@ def sync(
     sort_by: Union[Unset, None, TestDocumentSortBy] = UNSET,
     status: Union[Unset, None, TestDocumentStatusFilter] = UNSET,
 ) -> Optional[PaginatedTestDocumentDetailDto]:
-    """Get a paginated listing of Test documents for a document type by ID
+    """Get a paginated listing of test documents for a document type by ID.
 
     Args:
         doc_type_id (str):
@@ -174,7 +174,7 @@ async def asyncio_detailed(
     sort_by: Union[Unset, None, TestDocumentSortBy] = UNSET,
     status: Union[Unset, None, TestDocumentStatusFilter] = UNSET,
 ) -> Response[PaginatedTestDocumentDetailDto]:
-    """Get a paginated listing of Test documents for a document type by ID
+    """Get a paginated listing of test documents for a document type by ID.
 
     Args:
         doc_type_id (str):
@@ -217,7 +217,7 @@ async def asyncio(
     sort_by: Union[Unset, None, TestDocumentSortBy] = UNSET,
     status: Union[Unset, None, TestDocumentStatusFilter] = UNSET,
 ) -> Optional[PaginatedTestDocumentDetailDto]:
-    """Get a paginated listing of Test documents for a document type by ID
+    """Get a paginated listing of test documents for a document type by ID.
 
     Args:
         doc_type_id (str):

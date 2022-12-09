@@ -9,8 +9,8 @@ T = TypeVar("T", bound="ModelColumnDto")
 class ModelColumnDto:
     """
     Attributes:
-        name (str): The name for the column
-        id (str): The unique id of this column.
+        name (str): The name for the column.
+        id (str): The unique ID of this column.
     """
 
     name: str

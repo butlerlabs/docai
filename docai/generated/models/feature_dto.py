@@ -12,7 +12,7 @@ class FeatureDto:
     """
     Attributes:
         name (FeatureName):
-        enabled (bool): Whether the feature is enabled
+        enabled (bool): Whether the feature is enabled.
     """
 
     name: FeatureName

@@ -11,11 +11,11 @@ T = TypeVar("T", bound="GoogleAdsDto")
 class GoogleAdsDto:
     """
     Attributes:
-        gclid (Union[Unset, str]): The GCLID from Google Ads associated with this user
-        utm_term (Union[Unset, str]): The UTM_TERM from Google Ads associated with this user
-        utm_campaign (Union[Unset, str]): The UTM_CAMPAIGN from Google Ads associated with this user
-        utm_source (Union[Unset, str]): The UTM_SOURCE from Google Ads associated with this user
-        utm_medium (Union[Unset, str]): The UTM_MEDIUM from Google Ads associated with this user
+        gclid (Union[Unset, str]): The GCLID from Google Ads associated with this user.
+        utm_term (Union[Unset, str]): The UTM_TERM from Google Ads associated with this user.
+        utm_campaign (Union[Unset, str]): The UTM_CAMPAIGN from Google Ads associated with this user.
+        utm_source (Union[Unset, str]): The UTM_SOURCE from Google Ads associated with this user.
+        utm_medium (Union[Unset, str]): The UTM_MEDIUM from Google Ads associated with this user.
     """
 
     gclid: Union[Unset, str] = UNSET

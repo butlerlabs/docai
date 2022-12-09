@@ -12,12 +12,12 @@ T = TypeVar("T", bound="QueueSettingsDto")
 class QueueSettingsDto:
     """
     Attributes:
-        notification_email (str): Email address to send notifications to
+        notification_email (str): Email address to send notifications to.
         user_review_setting (UserReviewSetting):
-        butler_reviewers_on (bool): Whether Butler Ops should review the documents in this queue
+        butler_reviewers_on (bool): Whether Butler Ops should review the documents in this queue.
         page_range (PageRangeDto):
-        id (str): ID of this queue
-        page_limit (float): Max number of pages that will be extracted per document
+        id (str): ID of this queue.
+        page_limit (float): Max number of pages that will be extracted per document.
     """
 
     notification_email: str

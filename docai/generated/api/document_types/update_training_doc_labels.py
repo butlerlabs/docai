@@ -58,7 +58,7 @@ def sync_detailed(
     client: AuthenticatedClient,
     json_body: LabelingResultsWithBlocksDto,
 ) -> Response[ExtractionResultStatusDto]:
-    """Add or update the labels of a Training Document.
+    """Add or update the labels of a training document.
 
     Args:
         doc_type_id (str):
@@ -91,7 +91,7 @@ def sync(
     client: AuthenticatedClient,
     json_body: LabelingResultsWithBlocksDto,
 ) -> Optional[ExtractionResultStatusDto]:
-    """Add or update the labels of a Training Document.
+    """Add or update the labels of a training document.
 
     Args:
         doc_type_id (str):
@@ -117,7 +117,7 @@ async def asyncio_detailed(
     client: AuthenticatedClient,
     json_body: LabelingResultsWithBlocksDto,
 ) -> Response[ExtractionResultStatusDto]:
-    """Add or update the labels of a Training Document.
+    """Add or update the labels of a training document.
 
     Args:
         doc_type_id (str):
@@ -148,7 +148,7 @@ async def asyncio(
     client: AuthenticatedClient,
     json_body: LabelingResultsWithBlocksDto,
 ) -> Optional[ExtractionResultStatusDto]:
-    """Add or update the labels of a Training Document.
+    """Add or update the labels of a training document.
 
     Args:
         doc_type_id (str):

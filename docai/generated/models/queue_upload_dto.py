@@ -11,11 +11,11 @@ T = TypeVar("T", bound="QueueUploadDto")
 class QueueUploadDto:
     """
     Attributes:
-        upload_id (str): ID of the upload
+        upload_id (str): ID of the upload.
         status (QueueUploadStatus):
-        uploaded_by (str): Email of the user who uploaded the upload
-        num_documents (float): Number of documents in the upload
-        created_at_time (float): Unix timestamp of when this upload was created
+        uploaded_by (str): Email of the user who uploaded the upload.
+        num_documents (float): Number of documents in the upload.
+        created_at_time (float): Unix timestamp of when this upload was created.
     """
 
     upload_id: str

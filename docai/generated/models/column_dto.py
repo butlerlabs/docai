@@ -9,7 +9,7 @@ T = TypeVar("T", bound="ColumnDto")
 class ColumnDto:
     """
     Attributes:
-        name (str): The name of the column
+        name (str): The name of the column.
     """
 
     name: str

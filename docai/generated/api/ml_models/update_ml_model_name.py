@@ -45,7 +45,7 @@ def sync_detailed(
     client: AuthenticatedClient,
     json_body: EditMlModelNameDto,
 ) -> Response[Any]:
-    """Updates the name of a ml model
+    """Updates the name of a ml model.
 
     Args:
         model_id (str):
@@ -75,7 +75,7 @@ async def asyncio_detailed(
     client: AuthenticatedClient,
     json_body: EditMlModelNameDto,
 ) -> Response[Any]:
-    """Updates the name of a ml model
+    """Updates the name of a ml model.
 
     Args:
         model_id (str):

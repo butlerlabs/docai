@@ -12,7 +12,7 @@ T = TypeVar("T", bound="FormFieldUpdateDto")
 class FormFieldUpdateDto:
     """
     Attributes:
-        name (str): Document field display name, e.g., "Purchase Order Number"
+        name (str): Document field display name.
         type (Union[Unset, EntityType]):
     """
 

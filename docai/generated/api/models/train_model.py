@@ -39,7 +39,7 @@ def sync_detailed(
     *,
     client: AuthenticatedClient,
 ) -> Response[Any]:
-    """Begins training a model
+    """Begins training a model.
 
     Args:
         id (str):
@@ -66,7 +66,7 @@ async def asyncio_detailed(
     *,
     client: AuthenticatedClient,
 ) -> Response[Any]:
-    """Begins training a model
+    """Begins training a model.
 
     Args:
         id (str):

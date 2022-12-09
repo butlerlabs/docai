@@ -46,7 +46,7 @@ def sync_detailed(
     *,
     client: AuthenticatedClient,
 ) -> Response[ModelSummaryListDto]:
-    """Get a list of all model summaries
+    """Get a list of all model summaries.
 
     Returns:
         Response[ModelSummaryListDto]
@@ -68,7 +68,7 @@ def sync(
     *,
     client: AuthenticatedClient,
 ) -> Optional[ModelSummaryListDto]:
-    """Get a list of all model summaries
+    """Get a list of all model summaries.
 
     Returns:
         Response[ModelSummaryListDto]
@@ -83,7 +83,7 @@ async def asyncio_detailed(
     *,
     client: AuthenticatedClient,
 ) -> Response[ModelSummaryListDto]:
-    """Get a list of all model summaries
+    """Get a list of all model summaries.
 
     Returns:
         Response[ModelSummaryListDto]
@@ -103,7 +103,7 @@ async def asyncio(
     *,
     client: AuthenticatedClient,
 ) -> Optional[ModelSummaryListDto]:
-    """Get a list of all model summaries
+    """Get a list of all model summaries.
 
     Returns:
         Response[ModelSummaryListDto]

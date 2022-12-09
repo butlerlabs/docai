@@ -11,7 +11,7 @@ T = TypeVar("T", bound="RoleListDto")
 class RoleListDto:
     """
     Attributes:
-        items (List[RoleDto]): List of roles
+        items (List[RoleDto]): List of roles.
     """
 
     items: List[RoleDto]

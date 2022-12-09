@@ -91,7 +91,7 @@ def sync_detailed(
     sort_by: Union[Unset, None, TrainingDetailsSortBy] = UNSET,
     document_status: Union[Unset, None, ModelTrainingDocumentStatus] = UNSET,
 ) -> Response[PaginatedTrainingDocumentsDto]:
-    """Get training documents for the specified model
+    """Get training documents for the specified model.
 
     Args:
         id (str):
@@ -136,7 +136,7 @@ def sync(
     sort_by: Union[Unset, None, TrainingDetailsSortBy] = UNSET,
     document_status: Union[Unset, None, ModelTrainingDocumentStatus] = UNSET,
 ) -> Optional[PaginatedTrainingDocumentsDto]:
-    """Get training documents for the specified model
+    """Get training documents for the specified model.
 
     Args:
         id (str):
@@ -174,7 +174,7 @@ async def asyncio_detailed(
     sort_by: Union[Unset, None, TrainingDetailsSortBy] = UNSET,
     document_status: Union[Unset, None, ModelTrainingDocumentStatus] = UNSET,
 ) -> Response[PaginatedTrainingDocumentsDto]:
-    """Get training documents for the specified model
+    """Get training documents for the specified model.
 
     Args:
         id (str):
@@ -217,7 +217,7 @@ async def asyncio(
     sort_by: Union[Unset, None, TrainingDetailsSortBy] = UNSET,
     document_status: Union[Unset, None, ModelTrainingDocumentStatus] = UNSET,
 ) -> Optional[PaginatedTrainingDocumentsDto]:
-    """Get training documents for the specified model
+    """Get training documents for the specified model.
 
     Args:
         id (str):

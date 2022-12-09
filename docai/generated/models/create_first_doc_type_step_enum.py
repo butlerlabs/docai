@@ -6,7 +6,6 @@ class CreateFirstDocTypeStepEnum(str, Enum):
     CREATENEWDOCTYPE = "CreateNewDocType"
     LEARNABOUTQUEUES = "LearnAboutQueues"
     UPLOADDOCSTOQUEUE = "UploadDocsToQueue"
-    LEARNABOUTBUTLEROPS = "LearnAboutButlerOps"
     CHECKOUTDOCUMENTATION = "CheckOutDocumentation"
     LINKTODOCTYPES = "LinkToDocTypes"
     LEARNABOUTDOCUMENTACCURACY = "LearnAboutDocumentAccuracy"

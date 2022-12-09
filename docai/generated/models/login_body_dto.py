@@ -9,8 +9,8 @@ T = TypeVar("T", bound="LoginBodyDto")
 class LoginBodyDto:
     """
     Attributes:
-        username (str): Username (e.g. myemail@gmail.com)
-        password (str):
+        username (str): User email.
+        password (str): User password.
     """
 
     username: str

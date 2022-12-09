@@ -52,7 +52,7 @@ def sync_detailed(
     *,
     client: AuthenticatedClient,
 ) -> Response[MlEndpointMetadataDto]:
-    """Get metadata of a ml endpoint
+    """Get metadata of a ml endpoint.
 
     Args:
         model_id (str):
@@ -82,7 +82,7 @@ def sync(
     *,
     client: AuthenticatedClient,
 ) -> Optional[MlEndpointMetadataDto]:
-    """Get metadata of a ml endpoint
+    """Get metadata of a ml endpoint.
 
     Args:
         model_id (str):
@@ -105,7 +105,7 @@ async def asyncio_detailed(
     *,
     client: AuthenticatedClient,
 ) -> Response[MlEndpointMetadataDto]:
-    """Get metadata of a ml endpoint
+    """Get metadata of a ml endpoint.
 
     Args:
         model_id (str):
@@ -133,7 +133,7 @@ async def asyncio(
     *,
     client: AuthenticatedClient,
 ) -> Optional[MlEndpointMetadataDto]:
-    """Get metadata of a ml endpoint
+    """Get metadata of a ml endpoint.
 
     Args:
         model_id (str):

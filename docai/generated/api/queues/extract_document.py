@@ -79,7 +79,7 @@ def sync_detailed(
     json_body: SingleFileUrlUploadDto,
     extra_results: Union[Unset, None, List[ExtractDocumentExtraResultsItem]] = UNSET,
 ) -> Response[ExtractionResultsDto]:
-    """Upload a single document to the queue specified by <queueId> and returns the extracted results
+    """Upload a single document to the queue specified by <queueId> and returns the extracted results.
 
     Args:
         queue_id (str):
@@ -115,7 +115,7 @@ def sync(
     json_body: SingleFileUrlUploadDto,
     extra_results: Union[Unset, None, List[ExtractDocumentExtraResultsItem]] = UNSET,
 ) -> Optional[ExtractionResultsDto]:
-    """Upload a single document to the queue specified by <queueId> and returns the extracted results
+    """Upload a single document to the queue specified by <queueId> and returns the extracted results.
 
     Args:
         queue_id (str):
@@ -144,7 +144,7 @@ async def asyncio_detailed(
     json_body: SingleFileUrlUploadDto,
     extra_results: Union[Unset, None, List[ExtractDocumentExtraResultsItem]] = UNSET,
 ) -> Response[ExtractionResultsDto]:
-    """Upload a single document to the queue specified by <queueId> and returns the extracted results
+    """Upload a single document to the queue specified by <queueId> and returns the extracted results.
 
     Args:
         queue_id (str):
@@ -178,7 +178,7 @@ async def asyncio(
     json_body: SingleFileUrlUploadDto,
     extra_results: Union[Unset, None, List[ExtractDocumentExtraResultsItem]] = UNSET,
 ) -> Optional[ExtractionResultsDto]:
-    """Upload a single document to the queue specified by <queueId> and returns the extracted results
+    """Upload a single document to the queue specified by <queueId> and returns the extracted results.
 
     Args:
         queue_id (str):

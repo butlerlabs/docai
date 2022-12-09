@@ -14,7 +14,7 @@ T = TypeVar("T", bound="TrainingCellWithConfidenceLabeledResultDto")
 class TrainingCellWithConfidenceLabeledResultDto:
     """
     Attributes:
-        column_id (str): The id of the column for this cell.
+        column_id (str): The ID of the column for this cell.
         confidence_score (DocExConfidence):
         blocks (List[BlockDto]): The blocks for this cell.
         region (Union[Unset, BoundingBoxDto]):

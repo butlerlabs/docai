@@ -14,9 +14,9 @@ T = TypeVar("T", bound="PutDocumentLabelsDto")
 class PutDocumentLabelsDto:
     """
     Attributes:
-        fields (List[SimpleFieldWithConfidenceLabeledResultDto]): The text and checkbox fields for this document
-        signatures (List[SignatureFieldWithConfidenceLabeledResultDto]): The signature fields for this document
-        tables (List[TrainingTableWithConfidenceLabeledResultDto]): The table fields for this document
+        fields (List[SimpleFieldWithConfidenceLabeledResultDto]): The text and checkbox fields for this document.
+        signatures (List[SignatureFieldWithConfidenceLabeledResultDto]): The signature fields for this document.
+        tables (List[TrainingTableWithConfidenceLabeledResultDto]): The table fields for this document.
         overwrite (Union[Unset, bool]): Overwrite existing labels if present. Default is true.
     """
 

@@ -13,7 +13,7 @@ T = TypeVar("T", bound="SignatureFieldLabeledResultDto")
 class SignatureFieldLabeledResultDto:
     """
     Attributes:
-        id (str): The unique id of the signature field.
+        id (str): The unique ID of the signature field.
         name (str): The name of the signature field.
         type (ModelFieldType):
         region (Union[Unset, BoundingBoxDto]):

@@ -11,7 +11,7 @@ T = TypeVar("T", bound="TrainingRowWithConfidenceLabeledResultDto")
 class TrainingRowWithConfidenceLabeledResultDto:
     """
     Attributes:
-        id (str): The unique id of this row.
+        id (str): The unique ID of this row.
         cells (List[TrainingCellWithConfidenceLabeledResultDto]): The labeled results for this cell.
     """
 

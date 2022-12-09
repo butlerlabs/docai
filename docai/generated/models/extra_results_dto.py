@@ -15,11 +15,11 @@ class ExtraResultsDto:
     """
     Attributes:
         line_blocks (Union[Unset, None, List[ExtraBlockDto]]): Extra lineBlocks, only present if requested. If this is
-            an old document, or extra results otherwise failed to generate, then the value will be null
+            an old document, or extra results otherwise failed to generate, then the value will be null.
         form_fields (Union[Unset, None, List[ExtraFormFieldDto]]): Extra formFields, only present if requested. If this
-            is an old document, or extra results otherwise failed to generate, then the value will be null
+            is an old document, or extra results otherwise failed to generate, then the value will be null.
         tables (Union[Unset, None, List[ExtraTableDto]]): Extra tables, only present if requested. If this is an old
-            document, or extra results otherwise failed to generate, then the value will be null
+            document, or extra results otherwise failed to generate, then the value will be null.
     """
 
     line_blocks: Union[Unset, None, List[ExtraBlockDto]] = UNSET

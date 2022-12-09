@@ -7,7 +7,7 @@ T = TypeVar("T", bound="ChargebeeHostedPageDtoCheckoutInfo")
 
 @attr.s(auto_attribs=True)
 class ChargebeeHostedPageDtoCheckoutInfo:
-    """Customer Info (email, first name and last name) given in the checkout page used for tracking abandoned carts"""
+    """Customer Info (email, first name and last name) given in the checkout page used for tracking abandoned carts."""
 
     additional_properties: Dict[str, Any] = attr.ib(init=False, factory=dict)
 

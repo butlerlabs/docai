@@ -13,11 +13,11 @@ T = TypeVar("T", bound="TrainingDocumentDetailsDto")
 class TrainingDocumentDetailsDto:
     """
     Attributes:
-        document_id (str): The unique id of the document.
-        label_update_count (float): The number of times the labels have been updated for this document
-        fields (List[SimpleFieldLabeledResultDto]): The text and checkbox fields for this document
-        signatures (List[SignatureFieldLabeledResultDto]): The signature fields for this document
-        tables (List[TrainingTableLabeledResultDto]): The table fields for this document
+        document_id (str): The unique ID of the document.
+        label_update_count (float): The number of times the labels have been updated for this document.
+        fields (List[SimpleFieldLabeledResultDto]): The text and checkbox fields for this document.
+        signatures (List[SignatureFieldLabeledResultDto]): The signature fields for this document.
+        tables (List[TrainingTableLabeledResultDto]): The table fields for this document.
     """
 
     document_id: str

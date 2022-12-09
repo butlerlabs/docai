@@ -2,7 +2,7 @@ from typing import Any, Dict, List, Type, TypeVar, Union
 
 import attr
 
-from ..models.base_model_type import BaseModelType
+from ..models.doc_extraction_model_type import DocExtractionModelType
 from ..models.model_field_dto import ModelFieldDto
 from ..models.model_status import ModelStatus
 from ..models.model_table_dto import ModelTableDto
@@ -17,23 +17,23 @@ T = TypeVar("T", bound="ModelInfoDto")
 class ModelInfoDto:
     """
     Attributes:
-        id (str): The unique id of this model.
+        id (str): The unique ID of this model.
         name (str): Name of the model.
         status (ModelStatus):
-        model_type (BaseModelType):
-        fields (List[ModelFieldDto]): The text, checkbox, and signature fields for this model
-        tables (List[ModelTableDto]): The table fields for this model
-        queue_id (str): The id of the queue for this model.
-        num_training_documents (float): The number of training documents for this model
+        model_type (DocExtractionModelType):
+        fields (List[ModelFieldDto]): The text, checkbox, and signature fields for this model.
+        tables (List[ModelTableDto]): The table fields for this model.
+        queue_id (str): The ID of the queue for this model.
+        num_training_documents (float): The number of training documents for this model.
         training_disabled_reason (Union[Unset, TrainingDisabledReason]):
-        training_failure_reason (Union[Unset, str]): Reason for previous training failure
+        training_failure_reason (Union[Unset, str]): Reason for previous training failure.
         submit_training_documents_disabled_reason (Union[Unset, SubmitTrainingDocumentsDisabledReason]):
     """
 
     id: str
     name: str
     status: ModelStatus
-    model_type: BaseModelType
+    model_type: DocExtractionModelType
     fields: List[ModelFieldDto]
     tables: List[ModelTableDto]
     queue_id: str
@@ -105,7 +105,7 @@ class ModelInfoDto:
 
         status = ModelStatus(d.pop("status"))
 
-        model_type = BaseModelType(d.pop("modelType"))
+        model_type = DocExtractionModelType(d.pop("modelType"))
 
         fields = []
         _fields = d.pop("fields")

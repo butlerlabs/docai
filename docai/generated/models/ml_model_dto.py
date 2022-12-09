@@ -13,11 +13,11 @@ T = TypeVar("T", bound="MlModelDto")
 class MlModelDto:
     """
     Attributes:
-        model_id (str): The id of the ml model.
+        model_id (str): The ID of the ml model.
         name (str): The name of the ml model.
         status (ModelStatusEnum):
         model_type (ModelTypeEnum):
-        latest_version_id (Union[Unset, str]): The latest version id of the ml model.
+        latest_version_id (Union[Unset, str]): The latest version ID of the ml model.
     """
 
     model_id: str

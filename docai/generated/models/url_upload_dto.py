@@ -11,10 +11,10 @@ T = TypeVar("T", bound="UrlUploadDto")
 class UrlUploadDto:
     """
     Attributes:
-        url (str): URL to download the file from using a GET request
+        url (str): URL to download the file from using a GET request.
         file_name (Union[Unset, str]): Filename to save for the file. If empty, will use the final portion of the URL
-            path
-        mime_type (Union[Unset, str]): Mime type of file. If empty, will use the response content type of the download
+            path.
+        mime_type (Union[Unset, str]): Mime type of file. If empty, will use the response content type of the download.
     """
 
     url: str

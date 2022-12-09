@@ -12,7 +12,7 @@ T = TypeVar("T", bound="UploadGeneratedResultsDto")
 class UploadGeneratedResultsDto:
     """
     Attributes:
-        id (str): Upload Id
+        id (str): Upload ID.
         csv_result (UploadGeneratedResultsSignedUrlDto):
         xls_result (Union[Unset, UploadGeneratedResultsSignedUrlDto]):
     """

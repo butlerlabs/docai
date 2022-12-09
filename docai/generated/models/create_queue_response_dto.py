@@ -9,7 +9,7 @@ T = TypeVar("T", bound="CreateQueueResponseDto")
 class CreateQueueResponseDto:
     """
     Attributes:
-        queue_id (str): Id of the generated queue.
+        queue_id (str): ID of the generated queue.
     """
 
     queue_id: str

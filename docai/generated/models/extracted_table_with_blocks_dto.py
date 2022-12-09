@@ -13,10 +13,10 @@ T = TypeVar("T", bound="ExtractedTableWithBlocksDto")
 class ExtractedTableWithBlocksDto:
     """
     Attributes:
-        id (str): Id of the extracted table
-        name (str): Name of the extracted table
+        id (str): ID of the extracted table.
+        name (str): Name of the extracted table.
         column_headers (ExtractedColumnHeaderRowWithBlocksDto):
-        rows (List[ExtractedTableRowWithBlocksDto]): List of extracted table rows with associated blocks
+        rows (List[ExtractedTableRowWithBlocksDto]): List of extracted table rows with associated blocks.
         confidence_score (DocExConfidence):
     """
 

@@ -52,8 +52,8 @@ def sync_detailed(
     client: AuthenticatedClient,
     json_body: QueueBodyDto,
 ) -> Response[CreateQueueResponseDto]:
-    """Create a new queue. Takes in the document type id that the queue is used to process, the settings
-    for the queue, and the name for the new queue. Returns the newly generated queue id.
+    """Create a new queue. Takes in the document type id that the queue is used to process, the settings,
+    and the name. Returns the newly generated queue ID.
 
     Args:
         json_body (QueueBodyDto):
@@ -80,8 +80,8 @@ def sync(
     client: AuthenticatedClient,
     json_body: QueueBodyDto,
 ) -> Optional[CreateQueueResponseDto]:
-    """Create a new queue. Takes in the document type id that the queue is used to process, the settings
-    for the queue, and the name for the new queue. Returns the newly generated queue id.
+    """Create a new queue. Takes in the document type id that the queue is used to process, the settings,
+    and the name. Returns the newly generated queue ID.
 
     Args:
         json_body (QueueBodyDto):
@@ -101,8 +101,8 @@ async def asyncio_detailed(
     client: AuthenticatedClient,
     json_body: QueueBodyDto,
 ) -> Response[CreateQueueResponseDto]:
-    """Create a new queue. Takes in the document type id that the queue is used to process, the settings
-    for the queue, and the name for the new queue. Returns the newly generated queue id.
+    """Create a new queue. Takes in the document type id that the queue is used to process, the settings,
+    and the name. Returns the newly generated queue ID.
 
     Args:
         json_body (QueueBodyDto):
@@ -127,8 +127,8 @@ async def asyncio(
     client: AuthenticatedClient,
     json_body: QueueBodyDto,
 ) -> Optional[CreateQueueResponseDto]:
-    """Create a new queue. Takes in the document type id that the queue is used to process, the settings
-    for the queue, and the name for the new queue. Returns the newly generated queue id.
+    """Create a new queue. Takes in the document type id that the queue is used to process, the settings,
+    and the name. Returns the newly generated queue ID.
 
     Args:
         json_body (QueueBodyDto):

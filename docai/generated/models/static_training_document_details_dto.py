@@ -11,9 +11,9 @@ T = TypeVar("T", bound="StaticTrainingDocumentDetailsDto")
 class StaticTrainingDocumentDetailsDto:
     """
     Attributes:
-        document_id (str): The unique id of the document.
+        document_id (str): The unique ID of the document.
         signed_url (str): The signed url for this specific document.
-        mime_type (str): The type of document that the results were extracted from
+        mime_type (str): The type of document that the results were extracted from.
         word_blocks (List[BlockResultDto]): The word blocks for this specific document.
     """
 

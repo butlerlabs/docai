@@ -14,8 +14,6 @@ class FeatureName(str, Enum):
     SELFSERVICEONBOARDING = "SelfServiceOnboarding"
     SIGNATURE = "Signature"
     ADVANCEDQUEUES = "AdvancedQueues"
-    DOCUMENTRESULTSDISPLAYER = "DocumentResultsDisplayer"
-    DASHBOARDUI = "DashboardUI"
 
     def __str__(self) -> str:
         return str(self.value)

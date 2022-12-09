@@ -9,8 +9,8 @@ T = TypeVar("T", bound="ExtractionRangeDto")
 class ExtractionRangeDto:
     """
     Attributes:
-        start_page (float): Page number extraction started on, inclusive
-        end_page (float): Page number extraction ended on, inclusive
+        start_page (float): Page number extraction started on, inclusive.
+        end_page (float): Page number extraction ended on, inclusive.
     """
 
     start_page: float

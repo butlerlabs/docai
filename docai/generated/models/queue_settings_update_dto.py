@@ -12,9 +12,9 @@ T = TypeVar("T", bound="QueueSettingsUpdateDto")
 class QueueSettingsUpdateDto:
     """
     Attributes:
-        notification_email (str): Email address to send notifications to
+        notification_email (str): Email address to send notifications to.
         user_review_setting (UserReviewSetting):
-        butler_reviewers_on (bool): Whether Butler Ops should review the documents in this queue
+        butler_reviewers_on (bool): Whether Butler Ops should review the documents in this queue.
         page_range (PageRangeDto):
     """
 

@@ -11,8 +11,8 @@ T = TypeVar("T", bound="UploadDocumentsAppRunResponseDto")
 class UploadDocumentsAppRunResponseDto:
     """
     Attributes:
-        app_run_id (str):
-        documents (List[UploadDocumentResponseDto]):
+        app_run_id (str): ID of the app run.
+        documents (List[UploadDocumentResponseDto]): List of uploaded documents.
     """
 
     app_run_id: str

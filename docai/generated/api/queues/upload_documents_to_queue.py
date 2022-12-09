@@ -79,7 +79,7 @@ def sync_detailed(
     json_body: MultipleFileUrlUploadDto,
     extra_results: Union[Unset, None, List[UploadDocumentsToQueueExtraResultsItem]] = UNSET,
 ) -> Response[UploadDocumentsUploadResponseDto]:
-    """Upload documents to the queue specified by <queueId> for processing
+    """Upload documents to the queue specified by <queueId> for processing.
 
     Args:
         queue_id (str):
@@ -115,7 +115,7 @@ def sync(
     json_body: MultipleFileUrlUploadDto,
     extra_results: Union[Unset, None, List[UploadDocumentsToQueueExtraResultsItem]] = UNSET,
 ) -> Optional[UploadDocumentsUploadResponseDto]:
-    """Upload documents to the queue specified by <queueId> for processing
+    """Upload documents to the queue specified by <queueId> for processing.
 
     Args:
         queue_id (str):
@@ -144,7 +144,7 @@ async def asyncio_detailed(
     json_body: MultipleFileUrlUploadDto,
     extra_results: Union[Unset, None, List[UploadDocumentsToQueueExtraResultsItem]] = UNSET,
 ) -> Response[UploadDocumentsUploadResponseDto]:
-    """Upload documents to the queue specified by <queueId> for processing
+    """Upload documents to the queue specified by <queueId> for processing.
 
     Args:
         queue_id (str):
@@ -178,7 +178,7 @@ async def asyncio(
     json_body: MultipleFileUrlUploadDto,
     extra_results: Union[Unset, None, List[UploadDocumentsToQueueExtraResultsItem]] = UNSET,
 ) -> Optional[UploadDocumentsUploadResponseDto]:
-    """Upload documents to the queue specified by <queueId> for processing
+    """Upload documents to the queue specified by <queueId> for processing.
 
     Args:
         queue_id (str):

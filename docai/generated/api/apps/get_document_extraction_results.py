@@ -53,8 +53,8 @@ def sync_detailed(
     *,
     client: AuthenticatedClient,
 ) -> Response[List[DocumentExtractionResultsDto]]:
-    """Get extracted results of an extraction job started by the upload_documents endpoint after it
-    completes
+    """Get extracted results of an extraction job started by the upload documents endpoint after it
+    completes.
 
     Args:
         app_run_id (str):
@@ -81,8 +81,8 @@ def sync(
     *,
     client: AuthenticatedClient,
 ) -> Optional[List[DocumentExtractionResultsDto]]:
-    """Get extracted results of an extraction job started by the upload_documents endpoint after it
-    completes
+    """Get extracted results of an extraction job started by the upload documents endpoint after it
+    completes.
 
     Args:
         app_run_id (str):
@@ -102,8 +102,8 @@ async def asyncio_detailed(
     *,
     client: AuthenticatedClient,
 ) -> Response[List[DocumentExtractionResultsDto]]:
-    """Get extracted results of an extraction job started by the upload_documents endpoint after it
-    completes
+    """Get extracted results of an extraction job started by the upload documents endpoint after it
+    completes.
 
     Args:
         app_run_id (str):
@@ -128,8 +128,8 @@ async def asyncio(
     *,
     client: AuthenticatedClient,
 ) -> Optional[List[DocumentExtractionResultsDto]]:
-    """Get extracted results of an extraction job started by the upload_documents endpoint after it
-    completes
+    """Get extracted results of an extraction job started by the upload documents endpoint after it
+    completes.
 
     Args:
         app_run_id (str):

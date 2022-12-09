@@ -13,12 +13,12 @@ T = TypeVar("T", bound="DocumentTypeDto")
 class DocumentTypeDto:
     """
     Attributes:
-        id (str): ID of this doctype
-        name (str): Name of this doctype
+        id (str): ID of this document type.
+        name (str): Name of this document type.
         status (ModelStatus):
         model_type (BaseModelType):
-        description (str): Description of this doctype
-        training_failure_reason (Union[Unset, str]): Reason for previous training failure
+        description (str): Description of this document type.
+        training_failure_reason (Union[Unset, str]): Reason for previous training failure.
     """
 
     id: str

@@ -11,8 +11,8 @@ T = TypeVar("T", bound="TableDto")
 class TableDto:
     """
     Attributes:
-        name (str): The name of the table
-        columns (List[ColumnDto]): The columns of the table
+        name (str): The name of the table.
+        columns (List[ColumnDto]): The columns of the table.
     """
 
     name: str

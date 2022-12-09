@@ -11,7 +11,7 @@ T = TypeVar("T", bound="ModelSummaryListDto")
 class ModelSummaryListDto:
     """
     Attributes:
-        items (List[ModelSummaryDto]): List of models
+        items (List[ModelSummaryDto]): List of models.
     """
 
     items: List[ModelSummaryDto]

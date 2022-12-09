@@ -3,10 +3,8 @@ import logging
 
 from docai.common.base_client import BaseClient
 from docai.common.http_utils import verify_response_or_raise
-from docai.generated.api.document_types import get_document_type_schema
-from docai.generated.api.models import create_custom_model, get_model, get_model_details
+from docai.generated.api.models import create_custom_model, get_model
 from docai.generated.models import CreateModelDto, ModelInfoDto
-from docai.generated.models.document_type_schema_dto import DocumentTypeSchemaDto
 from docai.models.model_utils import modelFieldToFieldDto, modelTableToTableDto
 
 
@@ -20,9 +18,7 @@ class ModelClient(BaseClient):
         2. Only supports Models with Text type fields and tables
         """
 
-        get_model_res: DocumentTypeSchemaDto = verify_response_or_raise(
-            get_document_type_schema.sync_detailed(model_id, client=self._client)
-        )
+        get_model_res: ModelInfoDto = verify_response_or_raise(get_model.sync_detailed(model_id, client=self._client))
         logging.info(f"Fetching model details for {model_id}")
 
         # Temporary work around instead of using verify_response_or_raise due
@@ -31,7 +27,7 @@ class ModelClient(BaseClient):
             client=self._client,
             json_body=CreateModelDto(
                 name=model_name,
-                fields=[modelFieldToFieldDto(f) for f in get_model_res.form_fields],
+                fields=[modelFieldToFieldDto(f) for f in get_model_res.fields],
                 tables=[modelTableToTableDto(t) for t in get_model_res.tables],
             ),
         )

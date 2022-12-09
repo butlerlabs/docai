@@ -9,7 +9,7 @@ T = TypeVar("T", bound="FieldIdResponseDto")
 class FieldIdResponseDto:
     """
     Attributes:
-        field_id (str): The id of the field.
+        field_id (str): The ID of the field.
     """
 
     field_id: str

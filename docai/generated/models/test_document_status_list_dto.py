@@ -11,7 +11,7 @@ T = TypeVar("T", bound="TestDocumentStatusListDto")
 class TestDocumentStatusListDto:
     """
     Attributes:
-        items (List[TestDocumentStatusDto]): List of Test Document statuses
+        items (List[TestDocumentStatusDto]): List of test document statuses.
     """
 
     items: List[TestDocumentStatusDto]

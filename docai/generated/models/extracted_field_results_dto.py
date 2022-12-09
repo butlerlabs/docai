@@ -14,12 +14,12 @@ T = TypeVar("T", bound="ExtractedFieldResultsDto")
 class ExtractedFieldResultsDto:
     """
     Attributes:
-        id (str): Id of the extracted field
+        id (str): ID of the extracted field.
         type (DocExFieldType):
-        value (str): Extracted value associated with the field
-        associated_blocks (List[BlockResultDto]): Blocks associated with the extracted field
+        value (str): Extracted value associated with the field.
+        associated_blocks (List[BlockResultDto]): Blocks associated with the extracted field.
         confidence_score (DocExConfidence):
-        config_id (Union[Unset, str]): Id of the extracted field's config (form field config or column config)
+        config_id (Union[Unset, str]): ID of the extracted field's config (form field config or column config).
     """
 
     id: str

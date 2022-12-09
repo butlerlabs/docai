@@ -11,10 +11,10 @@ T = TypeVar("T", bound="PaginatedQueueDto")
 class PaginatedQueueDto:
     """
     Attributes:
-        has_next (bool): Whether there are more pages to fetch after this page
-        has_previous (bool): Whether there are more pages to fetch before this page
-        total_count (float): Total number of items across all pages
-        items (List[QueueDto]): Page of queues
+        has_next (bool): Whether there are more pages to fetch after this page.
+        has_previous (bool): Whether there are more pages to fetch before this page.
+        total_count (float): Total number of items across all pages.
+        items (List[QueueDto]): Page of queues.
     """
 
     has_next: bool

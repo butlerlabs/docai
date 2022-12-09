@@ -12,9 +12,9 @@ T = TypeVar("T", bound="ModelDetailsTrainingStatusDto")
 class ModelDetailsTrainingStatusDto:
     """
     Attributes:
-        num_documents_labeled (float): The number of documents labeled for this model
+        num_documents_labeled (float): The number of documents labeled for this model.
         num_documents_required_for_training (float): The number of documents that need to be labeled for training to be
-            enabled
+            enabled.
         training_disabled_reason (Union[Unset, TrainingDisabledReason]):
     """
 

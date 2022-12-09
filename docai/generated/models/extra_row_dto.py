@@ -11,7 +11,7 @@ T = TypeVar("T", bound="ExtraRowDto")
 class ExtraRowDto:
     """
     Attributes:
-        cells (List[ExtraBlockDto]): An array of this row's cells
+        cells (List[ExtraBlockDto]): An array of this row's cells.
     """
 
     cells: List[ExtraBlockDto]

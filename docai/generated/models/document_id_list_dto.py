@@ -9,7 +9,7 @@ T = TypeVar("T", bound="DocumentIdListDto")
 class DocumentIdListDto:
     """
     Attributes:
-        items (List[str]): The Document Ids generated for the uploaded Documents
+        items (List[str]): The document IDs generated for the uploaded documents.
     """
 
     items: List[str]

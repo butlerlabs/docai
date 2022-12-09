@@ -2,7 +2,7 @@ from typing import Any, Dict, List, Type, TypeVar
 
 import attr
 
-from ..models.training_document_status import TrainingDocumentStatus
+from ..models.document_status import DocumentStatus
 
 T = TypeVar("T", bound="TrainingDocumentStatusDto")
 
@@ -11,12 +11,12 @@ T = TypeVar("T", bound="TrainingDocumentStatusDto")
 class TrainingDocumentStatusDto:
     """
     Attributes:
-        id (str): The Id of the Training Document
-        status (TrainingDocumentStatus):
+        id (str): The ID of the training document.
+        status (DocumentStatus):
     """
 
     id: str
-    status: TrainingDocumentStatus
+    status: DocumentStatus
     additional_properties: Dict[str, Any] = attr.ib(init=False, factory=dict)
 
     def to_dict(self) -> Dict[str, Any]:
@@ -39,7 +39,7 @@ class TrainingDocumentStatusDto:
         d = src_dict.copy()
         id = d.pop("id")
 
-        status = TrainingDocumentStatus(d.pop("status"))
+        status = DocumentStatus(d.pop("status"))
 
         training_document_status_dto = cls(
             id=id,

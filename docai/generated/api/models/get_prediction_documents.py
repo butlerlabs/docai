@@ -3,9 +3,9 @@ from typing import Any, Dict, Optional, Union
 import httpx
 
 from ...client import AuthenticatedClient
-from ...models.model_training_details_dto import ModelTrainingDetailsDto
+from ...models.paginated_prediction_documents_dto import PaginatedPredictionDocumentsDto
+from ...models.prediction_documents_sort_by import PredictionDocumentsSortBy
 from ...models.sort_order import SortOrder
-from ...models.training_details_sort_by import TrainingDetailsSortBy
 from ...types import UNSET, Response, Unset
 
 
@@ -17,9 +17,11 @@ def _get_kwargs(
     before_id: Union[Unset, None, str] = UNSET,
     limit: Union[Unset, None, float] = UNSET,
     sort_order: Union[Unset, None, SortOrder] = UNSET,
-    sort_by: Union[Unset, None, TrainingDetailsSortBy] = UNSET,
+    sort_by: Union[Unset, None, PredictionDocumentsSortBy] = UNSET,
+    created_after: Union[Unset, None, str] = UNSET,
+    created_before: Union[Unset, None, str] = UNSET,
 ) -> Dict[str, Any]:
-    url = "{}/api/internal/models/{id}/training_details".format(client.base_url, id=id)
+    url = "{}/api/models/{id}/documents".format(client.base_url, id=id)
 
     headers: Dict[str, str] = client.get_headers()
     cookies: Dict[str, Any] = client.get_cookies()
@@ -43,6 +45,10 @@ def _get_kwargs(
 
     params["sortBy"] = json_sort_by
 
+    params["createdAfter"] = created_after
+
+    params["createdBefore"] = created_before
+
     params = {k: v for k, v in params.items() if v is not UNSET and v is not None}
 
     return {
@@ -55,15 +61,15 @@ def _get_kwargs(
     }
 
 
-def _parse_response(*, response: httpx.Response) -> Optional[ModelTrainingDetailsDto]:
+def _parse_response(*, response: httpx.Response) -> Optional[PaginatedPredictionDocumentsDto]:
     if response.status_code == 200:
-        response_200 = ModelTrainingDetailsDto.from_dict(response.json())
+        response_200 = PaginatedPredictionDocumentsDto.from_dict(response.json())
 
         return response_200
     return None
 
 
-def _build_response(*, response: httpx.Response) -> Response[ModelTrainingDetailsDto]:
+def _build_response(*, response: httpx.Response) -> Response[PaginatedPredictionDocumentsDto]:
     return Response(
         status_code=response.status_code,
         content=response.content,
@@ -80,9 +86,11 @@ def sync_detailed(
     before_id: Union[Unset, None, str] = UNSET,
     limit: Union[Unset, None, float] = UNSET,
     sort_order: Union[Unset, None, SortOrder] = UNSET,
-    sort_by: Union[Unset, None, TrainingDetailsSortBy] = UNSET,
-) -> Response[ModelTrainingDetailsDto]:
-    """Get training details of a model.
+    sort_by: Union[Unset, None, PredictionDocumentsSortBy] = UNSET,
+    created_after: Union[Unset, None, str] = UNSET,
+    created_before: Union[Unset, None, str] = UNSET,
+) -> Response[PaginatedPredictionDocumentsDto]:
+    """Get prediction documents for the specified model.
 
     Args:
         id (str):
@@ -90,10 +98,12 @@ def sync_detailed(
         before_id (Union[Unset, None, str]):
         limit (Union[Unset, None, float]):
         sort_order (Union[Unset, None, SortOrder]):
-        sort_by (Union[Unset, None, TrainingDetailsSortBy]):
+        sort_by (Union[Unset, None, PredictionDocumentsSortBy]):
+        created_after (Union[Unset, None, str]):
+        created_before (Union[Unset, None, str]):
 
     Returns:
-        Response[ModelTrainingDetailsDto]
+        Response[PaginatedPredictionDocumentsDto]
     """
 
     kwargs = _get_kwargs(
@@ -104,6 +114,8 @@ def sync_detailed(
         limit=limit,
         sort_order=sort_order,
         sort_by=sort_by,
+        created_after=created_after,
+        created_before=created_before,
     )
 
     response = httpx.request(
@@ -122,9 +134,11 @@ def sync(
     before_id: Union[Unset, None, str] = UNSET,
     limit: Union[Unset, None, float] = UNSET,
     sort_order: Union[Unset, None, SortOrder] = UNSET,
-    sort_by: Union[Unset, None, TrainingDetailsSortBy] = UNSET,
-) -> Optional[ModelTrainingDetailsDto]:
-    """Get training details of a model.
+    sort_by: Union[Unset, None, PredictionDocumentsSortBy] = UNSET,
+    created_after: Union[Unset, None, str] = UNSET,
+    created_before: Union[Unset, None, str] = UNSET,
+) -> Optional[PaginatedPredictionDocumentsDto]:
+    """Get prediction documents for the specified model.
 
     Args:
         id (str):
@@ -132,10 +146,12 @@ def sync(
         before_id (Union[Unset, None, str]):
         limit (Union[Unset, None, float]):
         sort_order (Union[Unset, None, SortOrder]):
-        sort_by (Union[Unset, None, TrainingDetailsSortBy]):
+        sort_by (Union[Unset, None, PredictionDocumentsSortBy]):
+        created_after (Union[Unset, None, str]):
+        created_before (Union[Unset, None, str]):
 
     Returns:
-        Response[ModelTrainingDetailsDto]
+        Response[PaginatedPredictionDocumentsDto]
     """
 
     return sync_detailed(
@@ -146,6 +162,8 @@ def sync(
         limit=limit,
         sort_order=sort_order,
         sort_by=sort_by,
+        created_after=created_after,
+        created_before=created_before,
     ).parsed
 
 
@@ -157,9 +175,11 @@ async def asyncio_detailed(
     before_id: Union[Unset, None, str] = UNSET,
     limit: Union[Unset, None, float] = UNSET,
     sort_order: Union[Unset, None, SortOrder] = UNSET,
-    sort_by: Union[Unset, None, TrainingDetailsSortBy] = UNSET,
-) -> Response[ModelTrainingDetailsDto]:
-    """Get training details of a model.
+    sort_by: Union[Unset, None, PredictionDocumentsSortBy] = UNSET,
+    created_after: Union[Unset, None, str] = UNSET,
+    created_before: Union[Unset, None, str] = UNSET,
+) -> Response[PaginatedPredictionDocumentsDto]:
+    """Get prediction documents for the specified model.
 
     Args:
         id (str):
@@ -167,10 +187,12 @@ async def asyncio_detailed(
         before_id (Union[Unset, None, str]):
         limit (Union[Unset, None, float]):
         sort_order (Union[Unset, None, SortOrder]):
-        sort_by (Union[Unset, None, TrainingDetailsSortBy]):
+        sort_by (Union[Unset, None, PredictionDocumentsSortBy]):
+        created_after (Union[Unset, None, str]):
+        created_before (Union[Unset, None, str]):
 
     Returns:
-        Response[ModelTrainingDetailsDto]
+        Response[PaginatedPredictionDocumentsDto]
     """
 
     kwargs = _get_kwargs(
@@ -181,6 +203,8 @@ async def asyncio_detailed(
         limit=limit,
         sort_order=sort_order,
         sort_by=sort_by,
+        created_after=created_after,
+        created_before=created_before,
     )
 
     async with httpx.AsyncClient(verify=client.verify_ssl) as _client:
@@ -197,9 +221,11 @@ async def asyncio(
     before_id: Union[Unset, None, str] = UNSET,
     limit: Union[Unset, None, float] = UNSET,
     sort_order: Union[Unset, None, SortOrder] = UNSET,
-    sort_by: Union[Unset, None, TrainingDetailsSortBy] = UNSET,
-) -> Optional[ModelTrainingDetailsDto]:
-    """Get training details of a model.
+    sort_by: Union[Unset, None, PredictionDocumentsSortBy] = UNSET,
+    created_after: Union[Unset, None, str] = UNSET,
+    created_before: Union[Unset, None, str] = UNSET,
+) -> Optional[PaginatedPredictionDocumentsDto]:
+    """Get prediction documents for the specified model.
 
     Args:
         id (str):
@@ -207,10 +233,12 @@ async def asyncio(
         before_id (Union[Unset, None, str]):
         limit (Union[Unset, None, float]):
         sort_order (Union[Unset, None, SortOrder]):
-        sort_by (Union[Unset, None, TrainingDetailsSortBy]):
+        sort_by (Union[Unset, None, PredictionDocumentsSortBy]):
+        created_after (Union[Unset, None, str]):
+        created_before (Union[Unset, None, str]):
 
     Returns:
-        Response[ModelTrainingDetailsDto]
+        Response[PaginatedPredictionDocumentsDto]
     """
 
     return (
@@ -222,5 +250,7 @@ async def asyncio(
             limit=limit,
             sort_order=sort_order,
             sort_by=sort_by,
+            created_after=created_after,
+            created_before=created_before,
         )
     ).parsed

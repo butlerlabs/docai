@@ -14,7 +14,7 @@ T = TypeVar("T", bound="SimpleFieldLabeledResultDto")
 class SimpleFieldLabeledResultDto:
     """
     Attributes:
-        id (str): The unique id of the field.
+        id (str): The unique ID of the field.
         name (str): The name of the field.
         type (ModelFieldType):
         blocks (List[BlockResultDto]): The blocks for this field.

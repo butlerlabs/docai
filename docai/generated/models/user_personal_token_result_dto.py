@@ -11,7 +11,7 @@ T = TypeVar("T", bound="UserPersonalTokenResultDto")
 class UserPersonalTokenResultDto:
     """
     Attributes:
-        token (Union[Unset, str]): Personal Access token that enables API access
+        token (Union[Unset, str]): Personal Access token that enables API access.
     """
 
     token: Union[Unset, str] = UNSET

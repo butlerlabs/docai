@@ -10,7 +10,7 @@ class StaticTrainingDocumentSummaryDto:
     """
     Attributes:
         document_id (str): The unique id of the document this signedUrl is for.
-        file_name (str): The file name of this document
+        file_name (str): The file name of this document.
         thumbnail_signed_url (str): The signed url that the thumbnail file can be downloaded from.
     """
 
